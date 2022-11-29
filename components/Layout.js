@@ -5,7 +5,7 @@ export function Layout() {
   return (
     <>
       <WelcomeCard />
-      <Navbar />
+      <Navbar role="navigation" />
     </>
   );
 }

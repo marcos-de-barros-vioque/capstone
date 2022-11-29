@@ -1,10 +1,10 @@
 import {render, screen} from "@testing-library/react";
-import NavBar from "../components/Navbar";
+import Navbar from "../components/Layout";
 import "@testing-library/jest-dom";
 
 describe("Navbar", () => {
   it("checks position of navigation", () => {
-    render(<NavBar />);
+    render(<Navbar />);
 
     const navbar = screen.getByRole("navbar");
 
