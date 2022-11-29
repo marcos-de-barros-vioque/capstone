@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Link from "next/link";
+import Image from "next/image";
 
 export function Navbar() {
     return (
@@ -7,16 +7,16 @@ export function Navbar() {
     <NavBar>
         <NavList>
             <NavItem>
-                <Link src="/home.png" alt="Home Page Icon" width={20} height={20}></Link>
+                <Image src="/home.png" alt="Home Page Icon" width={40} height={40} />
             </NavItem>
             <NavItem>
-                <Link src="/add-spending.png" alt="Add Spendings Page Icon" width={20} height={20}></Link>
+                <Image src="/add-spending.png" alt="Add Spendings Page Icon" width={40} height={40} />
             </NavItem>
             <NavItem>
-                <Link src="/tips-tricks.png" alt="Tips & Tricks Page Icon" width={20} height={20}></Link>
+                <Image src="/tips-tricks.png" alt="Tips & Tricks Page Icon" width={40} height={40} />
             </NavItem>
             <NavItem>
-                <Link src="/rewards.png" alt="Rewards Page Icon" width={20} height={20}></Link>
+                <Image src="/rewards.png" alt="Rewards Page Icon" width={40} height={40} />
             </NavItem>
       </NavList>
     </NavBar>
