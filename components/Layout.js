@@ -47,7 +47,7 @@ export function Layout() {
   );
 }
 
-const Navbar = styled.nav`
+export const Navbar = styled.nav`
   border-top: 3px solid black;
   position: fixed;
   bottom: 0;
