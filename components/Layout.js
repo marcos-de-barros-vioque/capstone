@@ -8,7 +8,7 @@ export function Layout() {
     <>
       <WelcomeCard />
       <Navbar role="navbar">
-      <NavList>
+        <NavList>
           <NavItem>
             <Image
               src="/home.png"
