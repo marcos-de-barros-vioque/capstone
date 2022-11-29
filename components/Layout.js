@@ -1,7 +1,7 @@
 //import {Navbar} from "./Navbar";
 import {WelcomeCard} from "../components/WelcomeCard";
 import styled from "styled-components";
-import Image from "next/image";
+import {Icon} from "@iconify/react";
 
 export function Layout() {
   return (
@@ -10,35 +10,35 @@ export function Layout() {
       <Navbar role="navbar">
         <NavList>
           <NavItem>
-            <Image
-              src="/home.png"
+            <Icon
+              icon="material-symbols:home-outline"
               alt="Home Page Icon"
-              width={40}
-              height={40}
+              width="60"
+              height="60"
             />
           </NavItem>
           <NavItem>
-            <Image
-              src="/add-spending.png"
+            <Icon
+              icon="material-symbols:add"
               alt="Add Spendings Page Icon"
-              width={40}
-              height={40}
+              width="60"
+              height="60"
             />
           </NavItem>
           <NavItem>
-            <Image
-              src="/tips-tricks.png"
+            <Icon
+              icon="icons8:idea"
               alt="Tips & Tricks Page Icon"
-              width={40}
-              height={40}
+              width="60"
+              height="60"
             />
           </NavItem>
           <NavItem>
-            <Image
-              src="/rewards.png"
+            <Icon
+              icon="mdi:trophy-outline"
               alt="Rewards Page Icon"
-              width={40}
-              height={40}
+              width="60"
+              height="60"
             />
           </NavItem>
         </NavList>
