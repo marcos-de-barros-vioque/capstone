@@ -4,10 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link
-          rel="icon"
-          href="/logo.png"
-        />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <body>
         <Main />
