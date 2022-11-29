@@ -4,7 +4,7 @@ import Image from "next/image";
 export function Navbar() {
   return (
     <>
-      <NavBar>
+      <NavBar role="navbar">
         <NavList>
           <NavItem>
             <Image
