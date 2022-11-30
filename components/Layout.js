@@ -1,4 +1,3 @@
-//import {Navbar} from "./Navbar";
 import {WelcomeCard} from "../components/WelcomeCard";
 import styled from "styled-components";
 import {Icon} from "@iconify/react";
