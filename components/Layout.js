@@ -66,5 +66,5 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   text-decoration: none;
-  color: #004A4F;
+  color: #004a4f;
 `;
