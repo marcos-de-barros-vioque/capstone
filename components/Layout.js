@@ -1,6 +1,7 @@
 import {WelcomeCard} from "../components/WelcomeCard";
 import styled from "styled-components";
 import {Icon} from "@iconify/react";
+import Link from "next/link";
 
 export function Layout() {
   return (
@@ -9,36 +10,44 @@ export function Layout() {
       <Navbar role="navbar">
         <NavList>
           <NavItem>
-            <Icon
-              icon="material-symbols:home-outline"
-              alt="Home Page Icon"
-              width="60"
-              height="60"
-            />
+            <Link href="/">
+              <Icon
+                icon="material-symbols:home-outline"
+                alt="Home Page Icon"
+                width="60"
+                height="60"
+              />
+            </Link>
           </NavItem>
           <NavItem>
-            <Icon
-              icon="material-symbols:add"
-              alt="Add Spendings Page Icon"
-              width="60"
-              height="60"
-            />
+            <Link href="/addspending">
+              <Icon
+                icon="material-symbols:add"
+                alt="Add Spendings Page Icon"
+                width="60"
+                height="60"
+              />
+            </Link>
           </NavItem>
           <NavItem>
-            <Icon
-              icon="icons8:idea"
-              alt="Tips & Tricks Page Icon"
-              width="60"
-              height="60"
-            />
+            <Link href="/tips">
+              <Icon
+                icon="icons8:idea"
+                alt="Tips & Tricks Page Icon"
+                width="60"
+                height="60"
+              />
+            </Link>
           </NavItem>
           <NavItem>
-            <Icon
-              icon="mdi:trophy-outline"
-              alt="Rewards Page Icon"
-              width="60"
-              height="60"
-            />
+            <Link href="/awards">
+              <Icon
+                icon="mdi:trophy-outline"
+                alt="Awards Page Icon"
+                width="60"
+                height="60"
+              />
+            </Link>
           </NavItem>
         </NavList>
       </Navbar>
@@ -66,5 +75,5 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   text-decoration: none;
-  color: #004a4f;
+  color: #006269;
 `;
