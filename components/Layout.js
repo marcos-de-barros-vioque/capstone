@@ -3,10 +3,11 @@ import {Icon} from "@iconify/react";
 import Link from "next/link";
 import {WelcomeCard} from "../components/WelcomeCard";
 
-export function Layout() {
+export function Layout({children}) {
   return (
     <>
       <WelcomeCard />
+      {children}
       <Navbar role="navbar">
         <NavList>
           <NavItem>
