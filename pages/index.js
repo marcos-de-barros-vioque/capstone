@@ -9,7 +9,7 @@ export default function Home() {
           name="description"
           content="Discover how easily you can monitor your monthly spendings with Spendator!"
         />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/logo_icon.png" />
       </Head>
     </>
   );
