@@ -1,6 +1,7 @@
 import Head from "next/head";
+import {WelcomeCard} from "../components/WelcomeCard";
 
-export default function Home() {
+export default function Home({children}) {
   return (
     <>
       <Head>
@@ -11,6 +12,8 @@ export default function Home() {
         />
         <link rel="icon" href="/logo_icon.png" />
       </Head>
+      {children}
+      <WelcomeCard />
     </>
   );
 }

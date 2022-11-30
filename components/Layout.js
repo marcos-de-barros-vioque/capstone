@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import {Icon} from "@iconify/react";
 import Link from "next/link";
-import {WelcomeCard} from "../components/WelcomeCard";
 
-export function Layout({children}) {
+export function Layout() {
   return (
     <>
-      <WelcomeCard />
-      {children}
       <Navbar role="navbar">
         <NavList>
           <NavItem>
