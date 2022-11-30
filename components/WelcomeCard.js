@@ -26,5 +26,5 @@ const StyledWelcomeCard = styled.div`
   align-items: center;
   width: 100%;
   height: 400px;
-  color: #004a4f;
+  color: #006269;
 `;
