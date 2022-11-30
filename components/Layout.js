@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "@iconify/react";
 import Link from "next/link";
-import WelcomeCard from "../components/WelcomeCard";
+import {WelcomeCard} from "../components/WelcomeCard";
 
 export function Layout() {
   return (
