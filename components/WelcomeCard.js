@@ -7,9 +7,9 @@ export function WelcomeCard() {
       <br />
       <br />
       <Image
-        src="/logo_brand.png"
+        src="/logo.png"
         alt="Spendator Branded Logo"
-        width={300}
+        width={400}
         height={300}
       />
       <br />
@@ -26,4 +26,5 @@ const StyledWelcomeCard = styled.div`
   align-items: center;
   width: 100%;
   height: 400px;
+  color: #004A4F;
 `;

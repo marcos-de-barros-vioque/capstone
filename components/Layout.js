@@ -47,7 +47,7 @@ export function Layout() {
 }
 
 export const Navbar = styled.nav`
-  border-top: 3px solid black;
+  border-top: 3px solid #006269;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -66,4 +66,5 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   text-decoration: none;
+  color: #004A4F;
 `;
