@@ -16,6 +16,7 @@ const StyledBody = styled.div`
   align-items: center;
   color: #006269;
   border-radius: 10px;
+  font-size: 50px;
   width: 90vw;
   height: 75vh;
   gap: 20px;
