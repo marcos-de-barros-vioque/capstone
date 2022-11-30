@@ -15,17 +15,17 @@ export default function Home() {
       </Head>
       <div>
         <StyledBody>
-         <br />
-         <br />
-        <Image
-          src="/logo.png"
-          alt="Spendator Branded Logo"
-          width={400}
-          height={300}
-        />
-         <br />
-         <br />
-         <h1>Welcome to your spendings tracker!</h1>
+          <br />
+          <br />
+          <Image
+            src="/logo.png"
+            alt="Spendator Branded Logo"
+            width={400}
+            height={300}
+          />
+          <br />
+          <br />
+          <h1>Welcome to your spendings tracker!</h1>
         </StyledBody>
       </div>
     </>
