@@ -21,7 +21,7 @@ export default function Home() {
             width={300}
             height={200}
           />
-          <h1>Welcome to your spendings tracker!</h1>
+          <StyledTitle>Welcome to your spendings tracker!</StyledTitle>
         </StyledBody>
       </div>
     </>
@@ -36,4 +36,9 @@ const StyledBody = styled.div`
   width: 100%;
   margin-top: 150px;
   color: #006269;
+`;
+
+const StyledTitle = styled.h1`
+  align-content: center;
+  width: 50%;
 `;

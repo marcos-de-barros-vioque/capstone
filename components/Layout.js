@@ -9,41 +9,41 @@ export function Layout() {
         <NavList>
           <NavItem>
             <Link href="/">
-              <Icon
+              <StyledIcon
                 icon="material-symbols:home-outline"
                 alt="Home Page Icon"
-                width="60"
-                height="60"
+                width="40"
+                height="40"
               />
             </Link>
           </NavItem>
           <NavItem>
             <Link href="/addspending">
-              <Icon
+              <StyledIcon
                 icon="material-symbols:add"
                 alt="Add Spendings Page Icon"
-                width="60"
-                height="60"
+                width="40"
+                height="40"
               />
             </Link>
           </NavItem>
           <NavItem>
             <Link href="/tips">
-              <Icon
+              <StyledIcon
                 icon="icons8:idea"
                 alt="Tips & Tricks Page Icon"
-                width="60"
-                height="60"
+                width="40"
+                height="40"
               />
             </Link>
           </NavItem>
           <NavItem>
             <Link href="/awards">
-              <Icon
+              <StyledIcon
                 icon="mdi:trophy-outline"
                 alt="Awards Page Icon"
-                width="60"
-                height="60"
+                width="40"
+                height="40"
               />
             </Link>
           </NavItem>
@@ -73,5 +73,8 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   text-decoration: none;
+`;
+
+const StyledIcon = styled(Icon)`
   color: #006269;
 `;
