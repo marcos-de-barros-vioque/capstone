@@ -3,10 +3,10 @@ import NewSpendingForm from "../../components/AddSpendingForm";
 
 export default function AddSpendingPage() {
   return (
-      <StyledBody>
-        <StyledTitle>Add Spendings</StyledTitle>
-        <NewSpendingForm />
-      </StyledBody>
+    <StyledBody>
+      <StyledTitle>Add Spendings</StyledTitle>
+      <NewSpendingForm />
+    </StyledBody>
   );
 }
 

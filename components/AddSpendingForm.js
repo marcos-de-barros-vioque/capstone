@@ -1,39 +1,17 @@
 import styled from "styled-components";
 
 export default function NewSpendingForm() {
-
   return (
     <StyledAddSpendingForm>
       <StyledFormLabel>Title</StyledFormLabel>
-      <StyledFormInput
-        type="text"
-        required
-      />
-      <StyledFormLabel>
-        Amount
-      </StyledFormLabel>
-      <StyledFormInput
-        type="number"
-        step="0.01"
-        required
-      />
-      <StyledFormLabel>
-        Date
-      </StyledFormLabel>
-      <StyledFormInput
-        type="date"
-        required
-      />
-      <StyledFormLabel>
-        Category
-      </StyledFormLabel>
-      <StyledFormInput
-        type="text"
-        required
-      />
-      <StyledFormButton type="submit">
-        Submit
-      </StyledFormButton>
+      <StyledFormInput type="text" required />
+      <StyledFormLabel>Amount</StyledFormLabel>
+      <StyledFormInput type="number" step="0.01" required />
+      <StyledFormLabel>Date</StyledFormLabel>
+      <StyledFormInput type="date" required />
+      <StyledFormLabel>Category</StyledFormLabel>
+      <StyledFormInput type="text" required />
+      <StyledFormButton type="submit">Submit</StyledFormButton>
     </StyledAddSpendingForm>
   );
 }
@@ -45,13 +23,13 @@ const StyledAddSpendingForm = styled.form`
   align-items: center;
   width: 30%;
   border-radius: 5%;
-  background-color: #549B8C;
+  background-color: #549b8c;
 `;
 
 const StyledFormLabel = styled.label`
   margin: 20px 0 5px 0;
   font-size: 20px;
-  color: #004A4F;
+  color: #004a4f;
 `;
 
 const StyledFormInput = styled.input`
@@ -68,5 +46,5 @@ const StyledFormButton = styled.button`
   font-size: 20px;
   border: 2px solid black;
   border-radius: 10px;
-  background-color: #549B8C;
+  background-color: #549b8c;
 `;
