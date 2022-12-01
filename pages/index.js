@@ -21,7 +21,7 @@ export default function Home() {
             width={300}
             height={200}
           />
-          <StyledTitle>Welcome to your spendings tracker!</StyledTitle>
+          <StyledWelcomeMessage>Welcome to your spendings tracker! Go to the “+” nav icon to start adding your first spending!</StyledWelcomeMessage>
         </StyledBody>
       </div>
     </>
@@ -38,7 +38,9 @@ const StyledBody = styled.div`
   color: #006269;
 `;
 
-const StyledTitle = styled.h1`
-  align-content: center;
-  width: 50%;
+const StyledWelcomeMessage = styled.p`
+margin-top: 50px;
+justify-content: center;
+font-size: 20px;
+width: 30%;
 `;
