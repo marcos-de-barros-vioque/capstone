@@ -39,6 +39,6 @@ const StyledBody = styled.div`
 `;
 
 const StyledTitle = styled.h1`
-align-content: center;
-width: 50%;
-`
+  align-content: center;
+  width: 50%;
+`;

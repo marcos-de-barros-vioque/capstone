@@ -3,18 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function Header() {
-    return (
-        <StyledHeaderContainer>
-            <StyledLogo href="/">
-              <Image
-                src="/logo_small_icon_only_inverted.png"
-                alt="Spendator app"
-                width="50"
-                height="50"
-              />
-            </StyledLogo>
-        </StyledHeaderContainer>
-    );
+  return (
+    <StyledHeaderContainer>
+      <StyledLogo href="/">
+        <Image
+          src="/logo_small_icon_only_inverted.png"
+          alt="Spendator app"
+          width="50"
+          height="50"
+        />
+      </StyledLogo>
+    </StyledHeaderContainer>
+  );
 }
 
 const StyledHeaderContainer = styled.div`
