@@ -15,16 +15,12 @@ export default function Home() {
       </Head>
       <div>
         <StyledBody>
-          <br />
-          <br />
           <Image
-            src="/logo.png"
+            src="/logo_small.png"
             alt="Spendator Branded Logo"
-            width={400}
-            height={300}
+            width={300}
+            height={200}
           />
-          <br />
-          <br />
           <h1>Welcome to your spendings tracker!</h1>
         </StyledBody>
       </div>
@@ -38,6 +34,6 @@ const StyledBody = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 400px;
+  margin-top: 150px;
   color: #006269;
 `;
