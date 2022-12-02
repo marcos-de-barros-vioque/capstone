@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import SpendingEntry from "./SpendingEntry";
 
 export default function NewSpendingForm({ newSpendingData }) {
   const routing = useRouter();
@@ -48,14 +49,14 @@ export default function NewSpendingForm({ newSpendingData }) {
     )}
     </div>
   );
-};
+}
 
 const StyledAddSpendingForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 200%;
   border-radius: 5%;
   background-color: #549b8c;
 `;
