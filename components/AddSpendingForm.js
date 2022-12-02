@@ -30,7 +30,7 @@ export default function NewSpendingForm({ onNewSpending }) {
       <option>Restaurants</option>
       <option>Others</option>
       </select>
-      <StyledFormButton type="submit" onClick={() => routing.push("/category")}>Submit</StyledFormButton>
+      <StyledFormButton type="submit" onClick={() => routing.push("/categories")}>Submit</StyledFormButton>
     </StyledAddSpendingForm>
   );
 }
