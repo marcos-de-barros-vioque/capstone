@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import SpendingEntry from "./SpendingEntry";
 
-export default function NewSpendingForm({ newSpendingData }) {
+export default function NewSpendingForm({ setSpendingData }) {
   const routing = useRouter();
   const [showSpendingEntry, setShowSpendingEntry] = useState(false);
 
@@ -13,7 +13,7 @@ export default function NewSpendingForm({ newSpendingData }) {
     const formData = new FormData(event.target);
     const spendingsAll = Object.fromEntries(formData);
 
-    newSpendingData((spendingData) => {
+    setSpendingData((spendingData) => {
       return {
         ...spendingData, spendingsEntries: [ ...spendingData.spendingsEntries, { ...spendingsAll,}],
       };
