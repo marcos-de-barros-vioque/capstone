@@ -5,8 +5,8 @@ export default function NewSpendingForm({ onNewSpending }) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const spendingData = new FormData(event.target);
-    const data = Object.fromEntries(spendingData);
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
     onNewSpending(data);
   }
 
