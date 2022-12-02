@@ -1,8 +1,19 @@
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
-export default function NewSpendingForm() {
+export default function NewSpendingForm({ onNewSpending }) {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const spendingData = new FormData(event.target);
+    const data = Object.fromEntries(spendingData);
+    onNewSpending(data);
+  }
+
+  const routing = useRouter();
+
   return (
-    <StyledAddSpendingForm>
+    <StyledAddSpendingForm onSubmit={handleSubmit}>
       <StyledFormLabel>Title</StyledFormLabel>
       <StyledFormInput type="text" required />
       <StyledFormLabel>Amount</StyledFormLabel>
@@ -19,7 +30,7 @@ export default function NewSpendingForm() {
       <option>Restaurants</option>
       <option>Others</option>
       </select>
-      <StyledFormButton type="submit">Submit</StyledFormButton>
+      <StyledFormButton type="submit" onClick={() => routing.push("/category")}>Submit</StyledFormButton>
     </StyledAddSpendingForm>
   );
 }
