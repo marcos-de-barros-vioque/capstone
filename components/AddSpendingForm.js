@@ -1,18 +1,30 @@
 import styled from "styled-components";
-//import {useRouter} from "next/router";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
-export default function NewSpendingForm({onNewSpending}) {
+export default function NewSpendingForm({ newSpendingData }) {
+  const routing = useRouter();
+  const [showSpendingEntry, setShowSpendingEntry] = useState(false);
+
   function handleSubmit(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-    onNewSpending(data);
+    const spendingsAll = Object.fromEntries(formData);
+
+    newSpendingData((spendingData) => {
+      return {
+        ...spendingData, spendingsEntries: [ ...spendingData.spendingsEntries, { ...spendingsAll,}],
+      };
+    });
+    setShowSpendingEntry(true);
   }
 
-  //const routing = useRouter();
 
   return (
+    <div>{showSpendingEntry && ( 
+      <SpendingEntry text={"Your spending has been successfully added!"} onClose={() => routing.push("/spendings")} />)} {!showSpendingEntry && (
+      <> {" "}
     <StyledAddSpendingForm onSubmit={handleSubmit}>
       <StyledFormLabel>Title</StyledFormLabel>
       <StyledFormInput type="text" required />
@@ -30,16 +42,13 @@ export default function NewSpendingForm({onNewSpending}) {
         <option>Restaurants</option>
         <option>Others</option>
       </select>
-      <StyledFormButton
-        type="submit"
-        text={"Your spending has been successfully added!"}
-        //onClick={() => routing.push("/spendings")}
-      >
-        Submit
-      </StyledFormButton>
+      <StyledFormButton type="submit">Submit</StyledFormButton>
     </StyledAddSpendingForm>
+    </>
+    )}
+    </div>
   );
-}
+};
 
 const StyledAddSpendingForm = styled.form`
   display: flex;
