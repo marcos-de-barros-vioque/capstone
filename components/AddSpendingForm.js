@@ -10,14 +10,15 @@ export default function NewSpendingForm() {
       <StyledFormLabel>Date</StyledFormLabel>
       <StyledFormInput type="date" required />
       <StyledFormLabel>Category</StyledFormLabel>
-      <StyledFormInput type="select" required >
-      <option value="food-drinks">Food and Drinks</option>
-      <option value="clothes">Clothes</option>
-      <option value="household">Household</option>
-      <option value="entertainment">Entertainment</option>
-      <option value="gasoline">Gasoline</option>
-      <option value="restaurants">Restaurants</option>
-      </StyledFormInput>
+      <select type="select" required >
+      <option>Food and Drinks</option>
+      <option>Clothes</option>
+      <option>Household</option>
+      <option>Entertainment</option>
+      <option>Gasoline</option>
+      <option>Restaurants</option>
+      <option>Others</option>
+      </select>
       <StyledFormButton type="submit">Submit</StyledFormButton>
     </StyledAddSpendingForm>
   );
