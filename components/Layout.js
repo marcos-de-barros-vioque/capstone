@@ -54,10 +54,10 @@ export function Layout() {
 }
 
 export const Navbar = styled.nav`
-  border-top: 3px solid #006269;
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #549b8c;
 `;
 
 const NavList = styled.ul`
@@ -68,7 +68,7 @@ const NavList = styled.ul`
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 10vh;
+  height: 8vh;
 `;
 
 const NavItem = styled.li`
@@ -76,5 +76,5 @@ const NavItem = styled.li`
 `;
 
 const StyledIcon = styled(Icon)`
-  color: #006269;
+  color: #004A4F;
 `;

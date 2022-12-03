@@ -5,41 +5,80 @@ export default function SpendingsPage() {
   const routing = useRouter();
 
   return (
-    <StyledBody>
+    <>
+    <StyledHeader>
       <StyledTitle>Your Spendings</StyledTitle>
+    </StyledHeader>
+    <StyledBody>
+      <StyledLog>
+        <StyledLogEntry>
+          <StyledLogCard>
+            <p>Jacket | 100€ | 01-12-2022 | Clothes</p>
+          </StyledLogCard>
+          <StyledLogCard>
+            <p>Supermarket | 50 € | 02-12-2022 | Food and Drinks</p>
+          </StyledLogCard>
+          <StyledLogCard>
+            <p>Jacket | 100€ | 01-12-2022 | Clothes</p>
+          </StyledLogCard>
+          <StyledLogCard>
+            <p>Supermarket | 50 € | 02-12-2022 | Food and Drinks</p>
+          </StyledLogCard>
+        </StyledLogEntry>
+      </StyledLog>
       <StyledBackButton onClick={() => routing.push("/addspending")}>
-        Back
+        Add New Spending
       </StyledBackButton>
     </StyledBody>
+    </>
   );
 }
 
-const StyledBody = styled.div`
+const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
-  color: #006269;
-  border-radius: 10px;
-  font-size: 30px;
-  height: 75vh;
-  gap: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  color: #004A4F;
 `;
 
-const StyledTitle = styled.h2`
-  align-content: center;
+const StyledTitle = styled.h1`
+   align-content: center;
+`;
+
+const StyledBody = styled.main`
+  display: flex;
+  flex-direction: column;
+  color: #006269;
+  font-size: 30px;
+`;
+
+const StyledLog = styled.ul`
+  margin-right: 70px;
+  margin-left: 70px;
+`;
+
+const StyledLogEntry = styled.li`
+  list-style-type: none;
+`;
+
+const StyledLogCard = styled.div`
+  width: 100%;
+  border-radius: 5%;
+  background-color: #549b8c;
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
 `;
 
 const StyledBackButton = styled.button`
   align-self: center;
   text-align: center;
-  margin: 20px 0 20px 0;
-  padding: 10px;
-  font-size: 20px;
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: #549b8c;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 30px;
+  color: white;
+  background-color: #004A4F;
+  margin-bottom: 100px;
 `;

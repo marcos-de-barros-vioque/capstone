@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import NewSpendingForm from "../../components/AddSpendingForm";
+import {useRouter} from "next/router";
 
 export default function AddSpendingPage({ spendingInput, addSpendingInput }) {
+  const routing = useRouter();
+
   return (
     <>
     <StyledHeader>
@@ -9,7 +12,7 @@ export default function AddSpendingPage({ spendingInput, addSpendingInput }) {
     </StyledHeader>
     <StyledBody>
       <NewSpendingForm addSpending={addSpendingInput} />
-      <StyledLogTitle> Your Spendings Log</StyledLogTitle>
+      <StyledLogTitle onClick={() => routing.push("/spendings")}> Your Spendings Log</StyledLogTitle>
       <StyledLog>
       {spendingInput.map((spendingInput) => (
           // eslint-disable-next-line react/jsx-key
@@ -29,7 +32,7 @@ export default function AddSpendingPage({ spendingInput, addSpendingInput }) {
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 80px;
   justify-content: center;
   align-items: center;
   color: #004A4F;

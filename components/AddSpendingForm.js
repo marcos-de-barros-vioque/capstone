@@ -1,9 +1,9 @@
 import styled from "styled-components";
-//import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 export default function NewSpendingForm({ addSpending }) {
   
-  //const router = useRouter();
+  const router = useRouter();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -12,7 +12,7 @@ export default function NewSpendingForm({ addSpending }) {
     const data = Object.fromEntries(formData);
 
     addSpending(data);
-    //router.push("./spendings");
+    router.push("./spendings");
   }
 
 
@@ -60,7 +60,7 @@ const StyledAddSpendingForm = styled.form`
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  width: 100%;
+  width: 150%;
   border-radius: 5%;
   background-color: #549b8c;
 `;
@@ -86,10 +86,10 @@ const StyledFormSelect = styled.select`
 const StyledFormButton = styled.button`
   align-self: center;
   text-align: center;
-  margin: 20px 0 20px 0;
+  margin: 25px 0 20px 0;
   padding: 10px;
-  font-size: 20px;
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: #549b8c;
+  font-size: 18px;
+  border-radius: 30px;
+  color: white;
+  background-color: #004A4F;
 `;

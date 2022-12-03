@@ -23,10 +23,11 @@ const StyledHeaderContainer = styled.div`
   align-items: left;
   position: fixed;
   width: 100%;
+  background-color: #549b8c;
   top: 0;
 `;
 
 const StyledLogo = styled(Link)`
   text-decoration: none;
-  margin: 30px 0px 0px 30px;
+  margin: 10px 0px 10px 30px;
 `;

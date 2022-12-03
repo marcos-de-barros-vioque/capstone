@@ -37,7 +37,7 @@ const StyledBody = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 200px;
   color: #006269;
 `;
 
