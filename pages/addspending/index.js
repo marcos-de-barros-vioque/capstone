@@ -1,12 +1,26 @@
 import styled from "styled-components";
 import NewSpendingForm from "../../components/AddSpendingForm";
 
-export default function AddSpendingPage() {
+export default function AddSpendingPage({ spendingInput, addSpendingInput }) {
   return (
+    <>
     <StyledBody>
       <StyledTitle>Add Spendings</StyledTitle>
-      <NewSpendingForm />
+      <NewSpendingForm addSpending={addSpendingInput} />
+      <StyledLogSubtitle> Your Spendings Log</StyledLogSubtitle>
+      <StyledLog>
+      {spendingInput.map((spendingInput) => (
+          // eslint-disable-next-line react/jsx-key
+          <StyledLogEntry>
+            {spendingInput.title}
+            {spendingInput.amount}€
+            {spendingInput.date}
+            {spendingInput.category}
+          </StyledLogEntry>
+        ))}
+      </StyledLog>
     </StyledBody>
+    </>
   );
 }
 
@@ -26,5 +40,22 @@ const StyledBody = styled.div`
 `;
 
 const StyledTitle = styled.h2`
+  margin-top: 20px;
   align-content: center;
 `;
+
+const StyledLogSubtitle = styled.h3`
+  align-content: center;
+`;
+
+const StyledLog = styled.ul`
+  margin-top: 20px;
+  align-content: center;
+  padding: 20px;
+`;
+
+const StyledLogEntry = styled.li`
+  margin-top: 20px;
+  align-content: center;
+`;
+

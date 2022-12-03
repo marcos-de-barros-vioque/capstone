@@ -1,22 +1,24 @@
 import styled from "styled-components";
-import { useRouter } from "next/router";
+//import { useRouter } from "next/router";
 
-export default function NewSpendingForm({ onAddSpending }) {
+export default function NewSpendingForm({ addSpending }) {
   
-  const router = useRouter();
+  //const router = useRouter();
 
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
-    onAddSpending(data);
-    router.push("./spendings");
+    addSpending(data);
+    //router.push("./spendings");
   }
 
 
   return (
+    <StyledBody>
+    <StyledIntro>Fill this form to add your spendings:</StyledIntro>
     <StyledAddSpendingForm onSubmit={handleSubmit}>
       <StyledFormLabel>Title</StyledFormLabel>
       <StyledFormInput type="text" id="title" name="title" required />
@@ -36,15 +38,28 @@ export default function NewSpendingForm({ onAddSpending }) {
       </select>
       <StyledFormButton type="submit">Submit</StyledFormButton>
     </StyledAddSpendingForm>
-    )
+    </StyledBody>
+    );
 }
+
+const StyledBody = styled.main`
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+`;
+
+const StyledIntro = styled.p`
+justify-content: center;
+font-size: 20px;
+`;
 
 const StyledAddSpendingForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 90%;
   border-radius: 5%;
   background-color: #549b8c;
 `;
