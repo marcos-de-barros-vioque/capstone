@@ -1,40 +1,31 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
-import { useState } from "react";
-import SpendingEntry from "./SpendingEntry";
 
-export default function NewSpendingForm({ setSpendingData }) {
-  const routing = useRouter();
-  const [showSpendingEntry, setShowSpendingEntry] = useState(false);
+export default function NewSpendingForm({ onAddSpending }) {
+  
+  const router = useRouter();
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const spendingsAll = Object.fromEntries(formData);
+    const data = Object.fromEntries(formData);
 
-    setSpendingData((spendingData) => {
-      return {
-        ...spendingData, spendingsEntries: [ ...spendingData.spendingsEntries, { ...spendingsAll,}],
-      };
-    });
-    setShowSpendingEntry(true);
+    onAddSpending(data);
+    router.push("./spendings");
   }
 
 
   return (
-    <div>{showSpendingEntry && ( 
-      <SpendingEntry text={"Your spending has been successfully added!"} onClose={() => routing.push("/spendings")} />)} {!showSpendingEntry && (
-      <> {" "}
     <StyledAddSpendingForm onSubmit={handleSubmit}>
       <StyledFormLabel>Title</StyledFormLabel>
-      <StyledFormInput type="text" required />
+      <StyledFormInput type="text" id="title" name="title" required />
       <StyledFormLabel>Amount</StyledFormLabel>
-      <StyledFormInput type="number" step="0.01" required />
+      <StyledFormInput type="number" id="amount" name="amount" step="0.01" min="0" required />
       <StyledFormLabel>Date</StyledFormLabel>
-      <StyledFormInput type="date" required />
+      <StyledFormInput type="date" id="date" name="date" required />
       <StyledFormLabel>Category</StyledFormLabel>
-      <select type="select" required >
+      <select type="select" id="category" name="category" required >
         <option>Food and Drinks</option>
         <option>Clothes</option>
         <option>Household</option>
@@ -45,10 +36,7 @@ export default function NewSpendingForm({ setSpendingData }) {
       </select>
       <StyledFormButton type="submit">Submit</StyledFormButton>
     </StyledAddSpendingForm>
-    </>
-    )}
-    </div>
-  );
+    )
 }
 
 const StyledAddSpendingForm = styled.form`
@@ -56,7 +44,7 @@ const StyledAddSpendingForm = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200%;
+  width: 50%;
   border-radius: 5%;
   background-color: #549b8c;
 `;

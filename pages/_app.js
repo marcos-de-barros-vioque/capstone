@@ -4,13 +4,26 @@ import {Header} from "../components/Header";
 import { useLocalStorage } from "../helpers/hooks";
 
 function MyApp({Component, pageProps}) {
-  const [spendingData, setSpendingData] = useLocalStorage("data");
+  const [addSpending, setAddSpending] = useLocalStorage("addSpending",[]);
+
+  function addAddSpending(addSpending) {
+    setAddSpending((previousAddSpending) => [
+      ...previousAddSpending,
+      {
+        adding: addSpending.adding,
+        addFor: addSpending.addFor,
+      },
+    ]);
+  }
 
   return (
     <>
       <GlobalStyles />
       <Header />
-      <Component {...pageProps} spendingData={spendingData} setSpendingData={setSpendingData} />
+      <Component {...pageProps} 
+      addSpending={addSpending}
+      onAddAddSpending={addAddSpending}
+      />
       <Layout />
     </>
   );
