@@ -18,7 +18,7 @@ export default function NewSpendingForm({ addSpending }) {
 
   return (
     <StyledBody>
-    <StyledIntro>Fill this form to add your spendings:</StyledIntro>
+    <StyledIntro>Please fill the form to add your spendings:</StyledIntro>
     <StyledAddSpendingForm onSubmit={handleSubmit}>
       <StyledFormLabel>Title</StyledFormLabel>
       <StyledFormInput type="text" id="title" name="title" required />
@@ -27,7 +27,7 @@ export default function NewSpendingForm({ addSpending }) {
       <StyledFormLabel>Date</StyledFormLabel>
       <StyledFormInput type="date" id="date" name="date" required />
       <StyledFormLabel>Category</StyledFormLabel>
-      <select type="select" id="category" name="category" required >
+      <StyledFormSelect type="select" id="category" name="category" required >
         <option>Food and Drinks</option>
         <option>Clothes</option>
         <option>Household</option>
@@ -35,17 +35,17 @@ export default function NewSpendingForm({ addSpending }) {
         <option>Gasoline</option>
         <option>Restaurants</option>
         <option>Others</option>
-      </select>
+      </StyledFormSelect>
       <StyledFormButton type="submit">Submit</StyledFormButton>
     </StyledAddSpendingForm>
     </StyledBody>
     );
 }
 
-const StyledBody = styled.main`
+const StyledBody = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 100px;
   align-items: center;
 `;
 
@@ -59,7 +59,8 @@ const StyledAddSpendingForm = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  margin-top: 10px;
+  width: 100%;
   border-radius: 5%;
   background-color: #549b8c;
 `;
@@ -71,6 +72,12 @@ const StyledFormLabel = styled.label`
 `;
 
 const StyledFormInput = styled.input`
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+`;
+
+const StyledFormSelect = styled.select`
   border-radius: 5px;
   padding: 10px;
   font-size: 15px;

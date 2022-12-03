@@ -4,10 +4,12 @@ import NewSpendingForm from "../../components/AddSpendingForm";
 export default function AddSpendingPage({ spendingInput, addSpendingInput }) {
   return (
     <>
-    <StyledBody>
+    <StyledHeader>
       <StyledTitle>Add Spendings</StyledTitle>
+    </StyledHeader>
+    <StyledBody>
       <NewSpendingForm addSpending={addSpendingInput} />
-      <StyledLogSubtitle> Your Spendings Log</StyledLogSubtitle>
+      <StyledLogTitle> Your Spendings Log</StyledLogTitle>
       <StyledLog>
       {spendingInput.map((spendingInput) => (
           // eslint-disable-next-line react/jsx-key
@@ -24,7 +26,20 @@ export default function AddSpendingPage({ spendingInput, addSpendingInput }) {
   );
 }
 
-const StyledBody = styled.div`
+const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  color: #004A4F;
+`;
+
+const StyledTitle = styled.h1`
+   align-content: center;
+`;
+
+const StyledBody = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,19 +47,13 @@ const StyledBody = styled.div`
   margin-top: 100px;
   color: #006269;
   border-radius: 10px;
-  font-size: 30px;
   height: 75vh;
   gap: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
 `;
 
-const StyledTitle = styled.h2`
-  margin-top: 20px;
-  align-content: center;
-`;
-
-const StyledLogSubtitle = styled.h3`
+const StyledLogTitle = styled.h2`
   align-content: center;
 `;
 
