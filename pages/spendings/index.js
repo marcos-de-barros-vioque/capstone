@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {useRouter} from "next/router";
 
-export default function SpendingsPage() {
+export default function SpendingsPage({ spendingInput }) {
   const routing = useRouter();
 
   return (
@@ -11,20 +11,17 @@ export default function SpendingsPage() {
     </StyledHeader>
     <StyledBody>
       <StyledLog>
-        <StyledLogEntry>
+       {spendingInput.map((spendingInput) => (
+          // eslint-disable-next-line react/jsx-key
+          <StyledLogEntry>
           <StyledLogCard>
-            <p>Jacket | 100€ | 01-12-2022 | Clothes</p>
+            {spendingInput.title}
+            {spendingInput.amount}€
+            {spendingInput.date}
+            {spendingInput.category}
           </StyledLogCard>
-          <StyledLogCard>
-            <p>Supermarket | 50 € | 02-12-2022 | Food and Drinks</p>
-          </StyledLogCard>
-          <StyledLogCard>
-            <p>Jacket | 100€ | 01-12-2022 | Clothes</p>
-          </StyledLogCard>
-          <StyledLogCard>
-            <p>Supermarket | 50 € | 02-12-2022 | Food and Drinks</p>
-          </StyledLogCard>
-        </StyledLogEntry>
+          </StyledLogEntry>
+          ))}
       </StyledLog>
       <StyledBackButton onClick={() => routing.push("/addspending")}>
         Add New Spending

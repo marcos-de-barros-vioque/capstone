@@ -2,7 +2,7 @@ import styled from "styled-components";
 import NewSpendingForm from "../../components/AddSpendingForm";
 import {useRouter} from "next/router";
 
-export default function AddSpendingPage({ spendingInput, onAddSpendingInput }) {
+export default function AddSpendingPage({ onAddSpendingInput }) {
   const routing = useRouter();
 
   return (
@@ -13,17 +13,6 @@ export default function AddSpendingPage({ spendingInput, onAddSpendingInput }) {
     <StyledBody>
       <NewSpendingForm onAddSpending={onAddSpendingInput} />
       <StyledLogTitle onClick={() => routing.push("/spendings")}> Click here to see your Spendings Log</StyledLogTitle>
-      <StyledLog>
-      {spendingInput.map((spendingInput) => (
-          // eslint-disable-next-line react/jsx-key
-          <StyledLogEntry>
-            {spendingInput.title}
-            {spendingInput.amount}€
-            {spendingInput.date}
-            {spendingInput.category}
-          </StyledLogEntry>
-        ))}
-      </StyledLog>
     </StyledBody>
     </>
   );
@@ -56,18 +45,7 @@ const StyledBody = styled.main`
   margin-bottom: 10px;
 `;
 
-const StyledLogTitle = styled.h2`
-  align-content: center;
-`;
-
-const StyledLog = styled.ul`
-  margin-top: 20px;
-  align-content: center;
-  padding: 20px;
-`;
-
-const StyledLogEntry = styled.li`
-  margin-top: 20px;
+const StyledLogTitle = styled.p`
   align-content: center;
 `;
 

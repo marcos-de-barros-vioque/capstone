@@ -1,18 +1,18 @@
 import styled from "styled-components";
-//import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 export default function NewSpendingForm({ onAddSpending }) {
   
-  //const router = useRouter();
+  const router = useRouter();
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
     onAddSpending(data);
-    //router.push("./spendings");
+    router.push("./spendings");
   }
 
 
