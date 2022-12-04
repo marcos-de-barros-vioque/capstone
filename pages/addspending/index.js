@@ -2,7 +2,7 @@ import styled from "styled-components";
 import NewSpendingForm from "../../components/AddSpendingForm";
 import {useRouter} from "next/router";
 
-export default function AddSpendingPage({ spendingInput, addSpendingInput }) {
+export default function AddSpendingPage({ spendingInput, onAddSpendingInput }) {
   const routing = useRouter();
 
   return (
@@ -11,8 +11,8 @@ export default function AddSpendingPage({ spendingInput, addSpendingInput }) {
       <StyledTitle>Add Spendings</StyledTitle>
     </StyledHeader>
     <StyledBody>
-      <NewSpendingForm addSpending={addSpendingInput} />
-      <StyledLogTitle onClick={() => routing.push("/spendings")}> Your Spendings Log</StyledLogTitle>
+      <NewSpendingForm onAddSpending={onAddSpendingInput} />
+      <StyledLogTitle onClick={() => routing.push("/spendings")}> Click here to see your Spendings Log</StyledLogTitle>
       <StyledLog>
       {spendingInput.map((spendingInput) => (
           // eslint-disable-next-line react/jsx-key

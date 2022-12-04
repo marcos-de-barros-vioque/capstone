@@ -6,13 +6,25 @@ import { useLocalStorage } from "../helpers/hooks";
 function MyApp({Component, pageProps}) {
   const [spendingInput, setSpendingInput] = useLocalStorage("spendingInput",[]);
 
+  function addSpendingInput(spendingInput) {
+    setSpendingInput((previousSpendingInput) => [
+      ...previousSpendingInput,
+      {
+        title: spendingInput.title,
+        amount: spendingInput.amount,
+        date: spendingInput.date,
+        category: spendingInput.category,
+      },
+    ]);
+  }
+
   return (
     <>
       <GlobalStyles />
       <Header />
       <Component {...pageProps} 
       spendingInput={spendingInput}
-      setSpendingInput={setSpendingInput}
+      onAddSpendingInput={addSpendingInput}
       />
       <Layout />
     </>
