@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import NewSpendingForm from "../../components/AddSpendingForm";
-import {useRouter} from "next/router";
 
 export default function AddSpendingPage({ onAddSpendingInput }) {
-  const routing = useRouter();
 
   return (
     <>
@@ -12,7 +10,6 @@ export default function AddSpendingPage({ onAddSpendingInput }) {
     </StyledHeader>
     <StyledBody>
       <NewSpendingForm onAddSpending={onAddSpendingInput} />
-      <StyledLogTitle onClick={() => routing.push("/spendings")}> Click here to see your Spendings Log</StyledLogTitle>
     </StyledBody>
     </>
   );
@@ -44,8 +41,3 @@ const StyledBody = styled.main`
   margin-top: 10px;
   margin-bottom: 10px;
 `;
-
-const StyledLogTitle = styled.p`
-  align-content: center;
-`;
-
