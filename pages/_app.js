@@ -1,13 +1,16 @@
 import GlobalStyles from "../styles/GlobalStyles";
 import {Layout} from "../components/Layout";
 import {Header} from "../components/Header";
-import { useLocalStorage } from "../helpers/hooks";
+import {useLocalStorage} from "../helpers/hooks";
 
 function MyApp({Component, pageProps}) {
-  const [spendingInput, setSpendingInput] = useLocalStorage("spendingInput",[]);
+  const [spendingInput, setSpendingInput] = useLocalStorage(
+    "spendingInput",
+    []
+  );
 
   function addSpendingInput(spendingInput) {
-    setSpendingInput((previousSpendingInput) => [
+    setSpendingInput(previousSpendingInput => [
       {
         title: spendingInput.title,
         amount: spendingInput.amount,
@@ -22,9 +25,10 @@ function MyApp({Component, pageProps}) {
     <>
       <GlobalStyles />
       <Header />
-      <Component {...pageProps} 
-      spendingInput={spendingInput}
-      onAddSpendingInput={addSpendingInput}
+      <Component
+        {...pageProps}
+        spendingInput={spendingInput}
+        onAddSpendingInput={addSpendingInput}
       />
       <Layout />
     </>

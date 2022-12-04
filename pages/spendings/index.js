@@ -1,29 +1,30 @@
 import styled from "styled-components";
 import {useRouter} from "next/router";
 
-export default function SpendingsPage({ spendingInput }) {
+export default function SpendingsPage({spendingInput}) {
   const routing = useRouter();
 
   return (
     <>
-    <StyledHeader>
-      <StyledTitle>Your Spendings</StyledTitle>
-    </StyledHeader>
-    <StyledBody>
-      <StyledLog>
-       {spendingInput.map((spendingInput) => (
-          // eslint-disable-next-line react/jsx-key
-          <StyledLogEntry>
-          <StyledLogCard>
-            {spendingInput.title} / {spendingInput.amount}€ / {spendingInput.date} / {spendingInput.category}
-          </StyledLogCard>
-          </StyledLogEntry>
+      <StyledHeader>
+        <StyledTitle>Your Spendings</StyledTitle>
+      </StyledHeader>
+      <StyledBody>
+        <StyledLog>
+          {spendingInput.map(spendingInput => (
+            // eslint-disable-next-line react/jsx-key
+            <StyledLogEntry>
+              <StyledLogCard>
+                {spendingInput.title} / {spendingInput.amount}€ /{" "}
+                {spendingInput.date} / {spendingInput.category}
+              </StyledLogCard>
+            </StyledLogEntry>
           ))}
-      </StyledLog>
-      <StyledBackButton onClick={() => routing.push("/addspending")}>
-        Add New Spending
-      </StyledBackButton>
-    </StyledBody>
+        </StyledLog>
+        <StyledBackButton onClick={() => routing.push("/addspending")}>
+          Add New Spending
+        </StyledBackButton>
+      </StyledBody>
     </>
   );
 }
@@ -34,11 +35,11 @@ const StyledHeader = styled.header`
   margin-top: 70px;
   justify-content: center;
   align-items: center;
-  color: #004A4F;
+  color: #004a4f;
 `;
 
 const StyledTitle = styled.h1`
-   align-content: center;
+  align-content: center;
 `;
 
 const StyledBody = styled.main`
@@ -63,7 +64,7 @@ const StyledLogCard = styled.div`
   background-color: #549b8c;
   margin-top: 10px;
   padding: 10px;
-  color: #004A4F;
+  color: #004a4f;
 `;
 
 const StyledBackButton = styled.button`
@@ -73,6 +74,6 @@ const StyledBackButton = styled.button`
   font-size: 18px;
   border-radius: 30px;
   color: white;
-  background-color: #004A4F;
+  background-color: #004a4f;
   margin-bottom: 100px;
 `;

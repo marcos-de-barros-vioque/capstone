@@ -76,5 +76,5 @@ const NavItem = styled.li`
 `;
 
 const StyledIcon = styled(Icon)`
-  color: #004A4F;
+  color: #004a4f;
 `;

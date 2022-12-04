@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 
-export default function NewSpendingForm({ onAddSpending }) {
-  
+export default function NewSpendingForm({onAddSpending}) {
   const router = useRouter();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
@@ -13,33 +12,39 @@ export default function NewSpendingForm({ onAddSpending }) {
 
     onAddSpending(data);
     router.push("./spendings");
-  }
-
+  };
 
   return (
     <StyledBody>
-    <StyledIntro>Please fill the form to add your spendings:</StyledIntro>
-    <StyledAddSpendingForm onSubmit={handleSubmit}>
-      <StyledFormLabel>Title</StyledFormLabel>
-      <StyledFormInput type="text" id="title" name="title" required />
-      <StyledFormLabel>Amount</StyledFormLabel>
-      <StyledFormInput type="number" id="amount" name="amount" step="0.01" min="0" required />
-      <StyledFormLabel>Date</StyledFormLabel>
-      <StyledFormInput type="date" id="date" name="date" required />
-      <StyledFormLabel>Category</StyledFormLabel>
-      <StyledFormSelect type="select" id="category" name="category" required >
-        <option>Food and Drinks</option>
-        <option>Clothes</option>
-        <option>Household</option>
-        <option>Entertainment</option>
-        <option>Gasoline</option>
-        <option>Restaurants</option>
-        <option>Others</option>
-      </StyledFormSelect>
-      <StyledFormButton type="submit">Submit</StyledFormButton>
-    </StyledAddSpendingForm>
+      <StyledIntro>Please fill the form to add your spendings:</StyledIntro>
+      <StyledAddSpendingForm onSubmit={handleSubmit}>
+        <StyledFormLabel>Title</StyledFormLabel>
+        <StyledFormInput type="text" id="title" name="title" required />
+        <StyledFormLabel>Amount</StyledFormLabel>
+        <StyledFormInput
+          type="number"
+          id="amount"
+          name="amount"
+          step="0.01"
+          min="0"
+          required
+        />
+        <StyledFormLabel>Date</StyledFormLabel>
+        <StyledFormInput type="date" id="date" name="date" required />
+        <StyledFormLabel>Category</StyledFormLabel>
+        <StyledFormSelect type="select" id="category" name="category" required>
+          <option>Food and Drinks</option>
+          <option>Clothes</option>
+          <option>Household</option>
+          <option>Entertainment</option>
+          <option>Gasoline</option>
+          <option>Restaurants</option>
+          <option>Others</option>
+        </StyledFormSelect>
+        <StyledFormButton type="submit">Submit</StyledFormButton>
+      </StyledAddSpendingForm>
     </StyledBody>
-    );
+  );
 }
 
 const StyledBody = styled.div`
@@ -49,8 +54,8 @@ const StyledBody = styled.div`
 `;
 
 const StyledIntro = styled.p`
-justify-content: center;
-font-size: 20px;
+  justify-content: center;
+  font-size: 20px;
 `;
 
 const StyledAddSpendingForm = styled.form`
@@ -91,5 +96,5 @@ const StyledFormButton = styled.button`
   font-size: 18px;
   border-radius: 30px;
   color: white;
-  background-color: #004A4F;
+  background-color: #004a4f;
 `;
