@@ -45,7 +45,6 @@ export default function NewSpendingForm({ onAddSpending }) {
 const StyledBody = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
   align-items: center;
 `;
 
@@ -60,6 +59,7 @@ const StyledAddSpendingForm = styled.form`
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  margin-bottom: 100px;
   width: 150%;
   border-radius: 5%;
   background-color: #549b8c;

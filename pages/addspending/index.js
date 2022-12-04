@@ -18,7 +18,7 @@ export default function AddSpendingPage({ onAddSpendingInput }) {
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: 60px;
   justify-content: center;
   align-items: center;
   color: #004A4F;
@@ -33,11 +33,6 @@ const StyledBody = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   color: #006269;
   border-radius: 10px;
-  height: 75vh;
-  gap: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 `;

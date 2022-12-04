@@ -8,13 +8,13 @@ function MyApp({Component, pageProps}) {
 
   function addSpendingInput(spendingInput) {
     setSpendingInput((previousSpendingInput) => [
-      ...previousSpendingInput,
       {
         title: spendingInput.title,
         amount: spendingInput.amount,
         date: spendingInput.date,
         category: spendingInput.category,
       },
+      ...previousSpendingInput,
     ]);
   }
 

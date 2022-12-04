@@ -15,10 +15,7 @@ export default function SpendingsPage({ spendingInput }) {
           // eslint-disable-next-line react/jsx-key
           <StyledLogEntry>
           <StyledLogCard>
-            {spendingInput.title}
-            {spendingInput.amount}€
-            {spendingInput.date}
-            {spendingInput.category}
+            {spendingInput.title} / {spendingInput.amount}€ / {spendingInput.date} / {spendingInput.category}
           </StyledLogCard>
           </StyledLogEntry>
           ))}
@@ -34,7 +31,7 @@ export default function SpendingsPage({ spendingInput }) {
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: 70px;
   justify-content: center;
   align-items: center;
   color: #004A4F;
@@ -66,7 +63,7 @@ const StyledLogCard = styled.div`
   background-color: #549b8c;
   margin-top: 10px;
   padding: 10px;
-  color: white;
+  color: #004A4F;
 `;
 
 const StyledBackButton = styled.button`
