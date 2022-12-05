@@ -37,13 +37,13 @@ const StyledBody = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 20vh;
   color: #006269;
 `;
 
 const StyledWelcomeMessage = styled.p`
-  margin-top: 50px;
+  margin-top: 5vh;
   justify-content: center;
-  font-size: 20px;
-  width: 30%;
+  font-size: 1.4rem;
+  width: 60%;
 `;

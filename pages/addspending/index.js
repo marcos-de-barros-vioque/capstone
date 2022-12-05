@@ -1,30 +1,37 @@
 import styled from "styled-components";
 import NewSpendingForm from "../../components/AddSpendingForm";
 
-export default function AddSpendingPage() {
+export default function AddSpendingPage({onAddSpendingInput}) {
   return (
-    <StyledBody>
-      <StyledTitle>Add Spendings</StyledTitle>
-      <NewSpendingForm />
-    </StyledBody>
+    <>
+      <StyledHeader>
+        <StyledTitle>Add Spendings</StyledTitle>
+      </StyledHeader>
+      <StyledBody>
+        <NewSpendingForm onAddSpending={onAddSpendingInput} />
+      </StyledBody>
+    </>
   );
 }
 
-const StyledBody = styled.div`
+const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  justify-content: center;
+  align-items: center;
+  color: #004a4f;
+`;
+
+const StyledTitle = styled.h1`
+  align-content: center;
+`;
+
+const StyledBody = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   color: #006269;
   border-radius: 10px;
-  font-size: 30px;
-  height: 75vh;
-  gap: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-`;
-
-const StyledTitle = styled.h2`
-  align-content: center;
 `;
