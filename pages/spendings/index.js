@@ -11,9 +11,8 @@ export default function SpendingsPage({spendingInput}) {
       </StyledHeader>
       <StyledBody>
         <StyledLog>
-          {spendingInput.map(spendingInput => (
-            // eslint-disable-next-line react/jsx-key
-            <StyledLogEntry>
+          {spendingInput.map((spendingInput, spendingForm) => (
+            <StyledLogEntry key={spendingForm}>
               <StyledLogCard>
                 {spendingInput.title} / {spendingInput.amount}€ /{" "}
                 {spendingInput.date} / {spendingInput.category}
