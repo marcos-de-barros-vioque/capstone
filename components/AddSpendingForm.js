@@ -33,12 +33,12 @@ export default function NewSpendingForm({onAddSpending}) {
         <StyledFormInput type="date" id="date" name="date" required />
         <StyledFormLabel>Category</StyledFormLabel>
         <StyledFormSelect type="select" id="category" name="category" required>
-          <option>Food</option>
-          <option>Clothes</option>
-          <option>Household</option>
-          <option>Entertainment</option>
-          <option>Gasoline</option>
-          <option>Restaurants</option>
+          <option value="Food">Food</option>
+          <option value="Clothes">Clothes</option>
+          <option value="Household">Household</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Gasoline">Gasoline</option>
+          <option value="Restaurants">Restaurants</option>
         </StyledFormSelect>
         <StyledFormButton type="submit">Submit</StyledFormButton>
       </StyledAddSpendingForm>

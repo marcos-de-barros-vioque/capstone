@@ -7,18 +7,21 @@ export default function SpendingsPage({spendingInput}) {
   return (
     <>
       <StyledHeader>
-        <StyledTitle>Your Spendings</StyledTitle>
+        <StyledTitle>Your Food Spendings</StyledTitle>
       </StyledHeader>
       <StyledBody>
         <StyledLog>
-          {spendingInput.map((spendingInput, spendingForm) => (
-            <StyledLogEntry key={spendingForm}>
-              <StyledLogCard>
-                {spendingInput.title} / {spendingInput.amount}€ /{" "}
-                {spendingInput.date} / {spendingInput.category}
-              </StyledLogCard>
-            </StyledLogEntry>
-          ))}
+          {spendingInput
+            .filter(spendingInput => spendingInput.category === "Food")
+            .map((spendingInput, index) => {
+              return (
+                <StyledLogEntry key={index}>
+                  <StyledLogCard>
+                    {`${spendingInput.title} / ${spendingInput.amount} / ${spendingInput.date} / ${spendingInput.category}`}
+                  </StyledLogCard>
+                </StyledLogEntry>
+              );
+            })}
         </StyledLog>
         <StyledBackButton onClick={() => routing.push("/addspending")}>
           Add New Spending
