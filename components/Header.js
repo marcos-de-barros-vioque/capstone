@@ -29,5 +29,5 @@ const StyledHeaderContainer = styled.div`
 
 const StyledLogo = styled(Link)`
   text-decoration: none;
-  margin: 10px 0px 10px 30px;
+  margin: 1.5vh 0px 1vh 2.5vw;
 `;
