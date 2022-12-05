@@ -65,13 +65,13 @@ const StyledAddSpendingForm = styled.form`
   align-items: center;
   margin-top: 1vh;
   margin-bottom: 10vh;
-  width: 150%;
+  width: 100%;
   border-radius: 5%;
   background-color: #549b8c;
 `;
 
 const StyledFormLabel = styled.label`
-  margin: 20px 0 5px 0;
+  margin: 1vh 0 1vh 0;
   font-size: 1.2rem;
   color: #004a4f;
 `;

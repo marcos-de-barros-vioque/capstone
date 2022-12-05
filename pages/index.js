@@ -45,5 +45,5 @@ const StyledWelcomeMessage = styled.p`
   margin-top: 5vh;
   justify-content: center;
   font-size: 1.4rem;
-  width: 30%;
+  width: 60%;
 `;
