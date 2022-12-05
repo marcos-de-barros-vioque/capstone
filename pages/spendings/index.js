@@ -32,7 +32,7 @@ export default function SpendingsPage({spendingInput}) {
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
+  margin-top: 10vh;
   justify-content: center;
   align-items: center;
   color: #004a4f;
@@ -46,12 +46,12 @@ const StyledBody = styled.main`
   display: flex;
   flex-direction: column;
   color: #006269;
-  font-size: 30px;
+  font-size: 1rem;
 `;
 
 const StyledLog = styled.ul`
-  margin-right: 70px;
-  margin-left: 70px;
+  margin-right: 3vw;
+  margin-left: 3vw;
 `;
 
 const StyledLogEntry = styled.li`
@@ -62,18 +62,18 @@ const StyledLogCard = styled.div`
   width: 100%;
   border-radius: 5%;
   background-color: #549b8c;
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 1vh;
+  padding: 0.5vw;
   color: #004a4f;
 `;
 
 const StyledBackButton = styled.button`
   align-self: center;
   text-align: center;
-  padding: 15px;
-  font-size: 18px;
+  padding: 1vh 1vw;
+  font-size: 1.2rem;
   border-radius: 30px;
   color: white;
   background-color: #004a4f;
-  margin-bottom: 100px;
+  margin-bottom: 10vh;
 `;

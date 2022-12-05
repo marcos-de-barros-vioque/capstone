@@ -55,7 +55,7 @@ const StyledBody = styled.div`
 
 const StyledIntro = styled.p`
   justify-content: center;
-  font-size: 20px;
+  font-size: 1.2rem;
 `;
 
 const StyledAddSpendingForm = styled.form`
@@ -63,8 +63,8 @@ const StyledAddSpendingForm = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 100px;
+  margin-top: 1vh;
+  margin-bottom: 10vh;
   width: 150%;
   border-radius: 5%;
   background-color: #549b8c;
@@ -72,28 +72,28 @@ const StyledAddSpendingForm = styled.form`
 
 const StyledFormLabel = styled.label`
   margin: 20px 0 5px 0;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #004a4f;
 `;
 
 const StyledFormInput = styled.input`
   border-radius: 5px;
-  padding: 10px;
-  font-size: 15px;
+  padding: 1vh;
+  font-size: 1rem;
 `;
 
 const StyledFormSelect = styled.select`
   border-radius: 5px;
-  padding: 10px;
-  font-size: 15px;
+  padding: 1vh;
+  font-size: 1rem;
 `;
 
 const StyledFormButton = styled.button`
   align-self: center;
   text-align: center;
-  margin: 25px 0 20px 0;
-  padding: 10px;
-  font-size: 18px;
+  margin: 1.2vw 0 1.2vw 0;
+  padding: 1vh 1vw;
+  font-size: 1.2rem;
   border-radius: 30px;
   color: white;
   background-color: #004a4f;
