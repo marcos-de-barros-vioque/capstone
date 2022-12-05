@@ -7,12 +7,12 @@ export default function SpendingsPage({spendingInput}) {
   return (
     <>
       <StyledHeader>
-        <StyledTitle>Your Spendings for Food</StyledTitle>
+        <StyledTitle>Your Spendings for Clothes</StyledTitle>
       </StyledHeader>
       <StyledBody>
         <StyledLog>
           {spendingInput
-            .filter(spendingInput => spendingInput.category === "Food")
+            .filter(spendingInput => spendingInput.category === "Clothes")
             .map((spendingInput, index) => {
               return (
                 <StyledLogEntry key={index}>
