@@ -11,7 +11,22 @@ export default function NewSpendingForm({onAddSpending}) {
     const data = Object.fromEntries(formData);
 
     onAddSpending(data);
-    router.push("./spendings");
+
+    router.push(spendingInput => {
+      if (spendingInput.category === "Food") {
+        ("./food");
+      } else if (spendingInput.category === "Clothes") {
+        ("./clothes");
+      } else if (spendingInput.category === "Household") {
+        ("./household");
+      } else if (spendingInput.category === "Entertainment") {
+        ("./entertainment");
+      } else if (spendingInput.category === "Gasoline") {
+        ("./gasoline");
+      } else if (spendingInput.category === "Restaurants") {
+        ("./restaurants");
+      }
+    });
   };
 
   return (

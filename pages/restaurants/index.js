@@ -17,7 +17,7 @@ export default function SpendingsPage({spendingInput}) {
               return (
                 <StyledLogEntry key={index}>
                   <StyledLogCard>
-                    {`${spendingInput.title} / ${spendingInput.amount} / ${spendingInput.date} / ${spendingInput.category}`}
+                    {`${spendingInput.title} / ${spendingInput.amount} € / ${spendingInput.date} / ${spendingInput.category}`}
                   </StyledLogCard>
                 </StyledLogEntry>
               );

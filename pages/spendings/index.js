@@ -14,7 +14,7 @@ export default function SpendingsPage({spendingInput}) {
           {spendingInput.map((spendingInput, spendingForm) => (
             <StyledLogEntry key={spendingForm}>
               <StyledLogCard>
-                {`${spendingInput.title} / ${spendingInput.amount} / ${spendingInput.date} / ${spendingInput.category}`}
+                {`${spendingInput.title} / ${spendingInput.amount} € / ${spendingInput.date} / ${spendingInput.category}`}
               </StyledLogCard>
             </StyledLogEntry>
           ))}
