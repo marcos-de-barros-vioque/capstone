@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import NewSpendingForm from "../../components/AddSpendingForm";
+import NewSpendingForm from "../../components/NewSpendingForm";
 
 export default function AddSpendingPage({onAddSpendingInput}) {
   return (
