@@ -1,21 +1,19 @@
 import styled from "styled-components";
 import {useRouter} from "next/router";
 
-export default function CategoryOverview({spendingInput}) {
+export default function CategoryOverview({spendingInput, categoryName}) {
   const routing = useRouter();
+  console.log({spendingInput});
 
   return (
     <>
       <StyledHeader>
-        <StyledTitle>Your Spendings for {spendingInput.category}</StyledTitle>
+        <StyledTitle>Your Spendings for {categoryName}</StyledTitle>
       </StyledHeader>
       <StyledBody>
         <StyledLog>
           {spendingInput
-            .filter(
-              spendingInput =>
-                spendingInput.category === `${spendingInput.category}`
-            )
+            .filter(spendingInput => spendingInput.category === categoryName)
             .map((spendingInput, index) => {
               return (
                 <StyledLogEntry key={index}>

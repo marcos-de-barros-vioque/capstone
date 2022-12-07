@@ -1,9 +1,7 @@
 import CategoryOverview from "../../components/CategoryOverview";
 
-export default function Household({spendingInput}) {
-  return (
-    <>
-      <CategoryOverview spendingInput={spendingInput} />
-    </>
-  );
-}
+const Household = ({spendingInput}) => (
+  <CategoryOverview spendingInput={spendingInput} categoryName="Household" />
+);
+
+export default Household;
