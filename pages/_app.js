@@ -9,13 +9,13 @@ function MyApp({Component, pageProps}) {
     []
   );
 
-  function addSpendingInput(spendingInput) {
+  function addSpendingInput(title, amount, date, category) {
     setSpendingInput(previousSpendingInput => [
       {
-        title: spendingInput.title,
-        amount: spendingInput.amount,
-        date: spendingInput.date,
-        category: spendingInput.category,
+        title,
+        amount,
+        date,
+        category,
       },
       ...previousSpendingInput,
     ]);
@@ -28,6 +28,7 @@ function MyApp({Component, pageProps}) {
       <Component
         {...pageProps}
         spendingInput={spendingInput}
+        setSpendingInput={setSpendingInput}
         onAddSpendingInput={addSpendingInput}
       />
       <Layout />
