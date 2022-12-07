@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {useRouter} from "next/router";
 
-export default function SpendingsPage({spendingInput}) {
+export default function Gasoline({spendingInput}) {
   const routing = useRouter();
 
   return (

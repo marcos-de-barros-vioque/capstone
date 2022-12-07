@@ -1,6 +1,6 @@
 import CategoryOverview from "../../components/CategoryOverview";
 
-export default function FoodPage({spendingInput}) {
+export default function Household({spendingInput}) {
   return (
     <>
       <CategoryOverview spendingInput={spendingInput} />
