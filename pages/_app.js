@@ -9,13 +9,13 @@ function MyApp({Component, pageProps}) {
     []
   );
 
-  function addSpendingInput(title, amount, date, category) {
+  function addSpendingInput(spendingInput) {
     setSpendingInput(previousSpendingInput => [
       {
-        title,
-        amount,
-        date,
-        category,
+        title: spendingInput.title,
+        amount: spendingInput.amount,
+        date: spendingInput.date,
+        category: spendingInput.category,
       },
       ...previousSpendingInput,
     ]);

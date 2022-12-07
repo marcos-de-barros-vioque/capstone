@@ -13,6 +13,7 @@ export default function NewSpendingForm({onAddSpending}) {
     onAddSpending(data);
 
     const {category} = data;
+    alert("Your spending has been successfully added!");
     router.push("./" + category.toLowerCase());
   };
 

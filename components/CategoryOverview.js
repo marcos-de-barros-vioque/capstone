@@ -7,9 +7,7 @@ export default function CategoryOverview({spendingInput}) {
   return (
     <>
       <StyledHeader>
-        <StyledTitle>
-          Your Spendings for {`${spendingInput.category}`}
-        </StyledTitle>
+        <StyledTitle>Your Spendings for {spendingInput.category}</StyledTitle>
       </StyledHeader>
       <StyledBody>
         <StyledLog>
