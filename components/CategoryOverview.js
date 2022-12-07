@@ -1,23 +1,27 @@
 import styled from "styled-components";
 import {useRouter} from "next/router";
 
-export default function SpendingsPage({spendingInput}) {
+export default function CategoryOverview({spendingInput, categoryName}) {
   const routing = useRouter();
 
   return (
     <>
       <StyledHeader>
-        <StyledTitle>Your Spendings</StyledTitle>
+        <StyledTitle>Your Spendings for {categoryName}</StyledTitle>
       </StyledHeader>
       <StyledBody>
         <StyledLog>
-          {spendingInput.map((spendingInput, spendingForm) => (
-            <StyledLogEntry key={spendingForm}>
-              <StyledLogCard>
-                {`${spendingInput.title} / ${spendingInput.amount} € / ${spendingInput.date} / ${spendingInput.category}`}
-              </StyledLogCard>
-            </StyledLogEntry>
-          ))}
+          {spendingInput
+            .filter(spendingInput => spendingInput.category === categoryName)
+            .map((spendingInput, index) => {
+              return (
+                <StyledLogEntry key={index}>
+                  <StyledLogCard>
+                    {`${spendingInput.title} / ${spendingInput.amount} € / ${spendingInput.date} / ${spendingInput.category}`}
+                  </StyledLogCard>
+                </StyledLogEntry>
+              );
+            })}
         </StyledLog>
         <StyledBackButton onClick={() => routing.push("/addspending")}>
           Add New Spending

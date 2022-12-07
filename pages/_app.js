@@ -28,6 +28,7 @@ function MyApp({Component, pageProps}) {
       <Component
         {...pageProps}
         spendingInput={spendingInput}
+        setSpendingInput={setSpendingInput}
         onAddSpendingInput={addSpendingInput}
       />
       <Layout />
