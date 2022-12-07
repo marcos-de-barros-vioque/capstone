@@ -3,7 +3,6 @@ import {useRouter} from "next/router";
 
 export default function CategoryOverview({spendingInput, categoryName}) {
   const routing = useRouter();
-  console.log({spendingInput});
 
   return (
     <>
