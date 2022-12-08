@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
 import Image from "next/image";
+import CategoriesCard from "./../components/CategoriesCard";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
             Welcome to your spendings tracker! Go to the “+” nav icon to start
             adding your first spending!
           </StyledWelcomeMessage>
+          <CategoriesCard />
         </StyledBody>
       </div>
     </>
