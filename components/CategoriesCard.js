@@ -76,7 +76,7 @@ const StyledCategoryCardOverview = styled.div`
   grid-template-columns: 3fr 3fr;
   gap: 1rem;
   margin-top: 3vh;
-  margin-bottom: 6vh;
+  margin-bottom: 10vh;
 `;
 
 const StyledCategoryCardLink = styled(Link)`
