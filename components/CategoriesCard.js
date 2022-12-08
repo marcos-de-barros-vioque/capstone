@@ -14,25 +14,17 @@ export default function CategoriesCard() {
             width="40"
             height="40"
           />
-          <StyledCategoryCardList>
-            <StyledCategoryCardListItem>
-              Total Spendings:
-            </StyledCategoryCardListItem>
-          </StyledCategoryCardList>
+          <StyledCategoryCardList></StyledCategoryCardList>
         </StyledCategoryCardLink>
         <StyledCategoryCardLink href="/clothes">
-          <StyledCategoryCardTitle></StyledCategoryCardTitle>
+          <StyledCategoryCardTitle>Clothes</StyledCategoryCardTitle>
           <StyledCategoryCardIcon
             icon="game-icons:clothes"
             alt="Clothes Category Icon"
             width="40"
             height="40"
           />
-          <StyledCategoryCardList>
-            <StyledCategoryCardListItem>
-              Total Spendings:
-            </StyledCategoryCardListItem>
-          </StyledCategoryCardList>
+          <StyledCategoryCardList></StyledCategoryCardList>
         </StyledCategoryCardLink>
         <StyledCategoryCardLink href="/household">
           <StyledCategoryCardTitle>Household</StyledCategoryCardTitle>
@@ -42,11 +34,7 @@ export default function CategoriesCard() {
             width="40"
             height="40"
           />
-          <StyledCategoryCardList>
-            <StyledCategoryCardListItem>
-              Total Spendings:
-            </StyledCategoryCardListItem>
-          </StyledCategoryCardList>
+          <StyledCategoryCardList></StyledCategoryCardList>
         </StyledCategoryCardLink>
         <StyledCategoryCardLink href="/entertainment">
           <StyledCategoryCardTitle>Entertainment</StyledCategoryCardTitle>
@@ -56,11 +44,7 @@ export default function CategoriesCard() {
             width="40"
             height="40"
           />
-          <StyledCategoryCardList>
-            <StyledCategoryCardListItem>
-              Total Spendings:
-            </StyledCategoryCardListItem>
-          </StyledCategoryCardList>
+          <StyledCategoryCardList></StyledCategoryCardList>
         </StyledCategoryCardLink>
         <StyledCategoryCardLink href="/gasoline">
           <StyledCategoryCardTitle>Gasoline</StyledCategoryCardTitle>
@@ -70,25 +54,17 @@ export default function CategoriesCard() {
             width="40"
             height="40"
           />
-          <StyledCategoryCardList>
-            <StyledCategoryCardListItem>
-              Total Spendings:
-            </StyledCategoryCardListItem>
-          </StyledCategoryCardList>
+          <StyledCategoryCardList></StyledCategoryCardList>
         </StyledCategoryCardLink>
         <StyledCategoryCardLink href="/restaurants">
           <StyledCategoryCardTitle>Restaurants</StyledCategoryCardTitle>
           <StyledCategoryCardIcon
-            icon="fluent:food-apple-24-filled"
+            icon="ion:restaurant-sharp"
             alt="Restaurants Category Icon"
             width="40"
             height="40"
           />
-          <StyledCategoryCardList>
-            <StyledCategoryCardListItem>
-              Total Spendings:
-            </StyledCategoryCardListItem>
-          </StyledCategoryCardList>
+          <StyledCategoryCardList></StyledCategoryCardList>
         </StyledCategoryCardLink>
       </StyledCategoryCardOverview>
     </>
@@ -98,18 +74,25 @@ export default function CategoriesCard() {
 const StyledCategoryCardOverview = styled.div`
   display: grid;
   grid-template-columns: 3fr 3fr;
-  gap: 2rem;
+  gap: 1rem;
+  margin-top: 3vh;
+  margin-bottom: 6vh;
 `;
 
 const StyledCategoryCardLink = styled(Link)`
-  font-size: 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
   color: #004a4f;
   border-radius: 5%;
   background-color: #549b8c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const StyledCategoryCardTitle = styled.h3`
-  justify-content: left;
+  margin-left: 3vw;
+  margin-right: 3vw;
 `;
 
 const StyledCategoryCardIcon = styled(Icon)`
@@ -119,8 +102,4 @@ const StyledCategoryCardIcon = styled(Icon)`
 const StyledCategoryCardList = styled.ul`
   margin-right: 3vw;
   margin-left: 3vw;
-`;
-
-const StyledCategoryCardListItem = styled.li`
-  list-style-type: none;
 `;

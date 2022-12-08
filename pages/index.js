@@ -19,13 +19,9 @@ export default function Home() {
           <Image
             src="/logo_small.png"
             alt="Spendator Branded Logo"
-            width={300}
-            height={200}
+            width={225}
+            height={150}
           />
-          <StyledWelcomeMessage>
-            Welcome to your spendings tracker! Go to the “+” nav icon to start
-            adding your first spending!
-          </StyledWelcomeMessage>
           <CategoriesCard />
         </StyledBody>
       </div>
@@ -39,13 +35,6 @@ const StyledBody = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 20vh;
+  margin-top: 12vh;
   color: #006269;
-`;
-
-const StyledWelcomeMessage = styled.p`
-  margin-top: 5vh;
-  justify-content: center;
-  font-size: 1.4rem;
-  width: 60%;
 `;
