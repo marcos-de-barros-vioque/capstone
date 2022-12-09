@@ -67,6 +67,9 @@ export default function CategoriesCard() {
           <StyledCategoryCardList></StyledCategoryCardList>
         </StyledCategoryCardLink>
       </StyledCategoryCardOverview>
+      <StyledAddSpendingLink href="/addspending">
+        Add New Spending
+      </StyledAddSpendingLink>
     </>
   );
 }
@@ -76,7 +79,7 @@ const StyledCategoryCardOverview = styled.div`
   grid-template-columns: 3fr 3fr;
   gap: 1rem;
   margin-top: 3vh;
-  margin-bottom: 10vh;
+  margin-bottom: 1vh;
 `;
 
 const StyledCategoryCardLink = styled(Link)`
@@ -102,4 +105,11 @@ const StyledCategoryCardIcon = styled(Icon)`
 const StyledCategoryCardList = styled.ul`
   margin-right: 3vw;
   margin-left: 3vw;
+`;
+
+const StyledAddSpendingLink = styled(Link)`
+  font-size: 1rem;
+  color: #004a4f;
+  margin-top: 2vh;
+  margin-bottom: 10vh;
 `;
