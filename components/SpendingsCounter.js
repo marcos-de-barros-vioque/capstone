@@ -7,11 +7,9 @@ export default function SpendingsCounter({spendingInput, categoryName}) {
       return allSpendingsValues + Number.parseFloat(currentSpending.amount);
     }, 0);
 
-  const totalSpendingsValue = allSpendingsValues;
-
   return (
     <StyledSpendingsCounter>
-      Total Amount: {totalSpendingsValue} €
+      Total Amount: {allSpendingsValues} €
     </StyledSpendingsCounter>
   );
 }
