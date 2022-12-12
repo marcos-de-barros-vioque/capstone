@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import {useRouter} from "next/router";
+import SpendingsCounter from "./SpendingsCounter";
+import Link from "next/link";
 
 export default function CategoryOverview({spendingInput, categoryName}) {
   const routing = useRouter();
@@ -10,6 +12,11 @@ export default function CategoryOverview({spendingInput, categoryName}) {
         <StyledTitle>Your Spendings for {categoryName}</StyledTitle>
       </StyledHeader>
       <StyledBody>
+        <SpendingsCounter
+          spendingInput={spendingInput}
+          categoryName={categoryName}
+        />
+        <h3>See all your entries:</h3>
         <StyledLog>
           {spendingInput
             .filter(spendingInput => spendingInput.category === categoryName)
@@ -17,15 +24,29 @@ export default function CategoryOverview({spendingInput, categoryName}) {
               return (
                 <StyledLogEntry key={index}>
                   <StyledLogCard>
-                    {`${spendingInput.title} / ${spendingInput.amount} € / ${spendingInput.date} / ${spendingInput.category}`}
+                    <StyledLogCardList>
+                      <StyledLogCardListItem>
+                        Title: {spendingInput.title}
+                      </StyledLogCardListItem>
+                      <StyledLogCardListItem>
+                        Amount: {spendingInput.amount} €
+                      </StyledLogCardListItem>
+                      <StyledLogCardListItem>
+                        Date: {spendingInput.date}
+                      </StyledLogCardListItem>
+                      <StyledLogCardListItem>
+                        Category: {spendingInput.category}
+                      </StyledLogCardListItem>
+                    </StyledLogCardList>
                   </StyledLogCard>
                 </StyledLogEntry>
               );
             })}
         </StyledLog>
-        <StyledBackButton onClick={() => routing.push("/addspending")}>
+        <StyledNewSpendingButton onClick={() => routing.push("/addspending")}>
           Add New Spending
-        </StyledBackButton>
+        </StyledNewSpendingButton>
+        <StyledGoBackLink href="/">Return to overview</StyledGoBackLink>
       </StyledBody>
     </>
   );
@@ -47,35 +68,57 @@ const StyledTitle = styled.h1`
 const StyledBody = styled.main`
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: #006269;
   font-size: 1rem;
 `;
 
 const StyledLog = styled.ul`
-  margin-right: 3vw;
-  margin-left: 3vw;
+  margin-top: 0.1em;
+  justify-self: center;
 `;
 
 const StyledLogEntry = styled.li`
   list-style-type: none;
+  margin-top: 1em;
 `;
 
 const StyledLogCard = styled.div`
-  width: 100%;
   border-radius: 5%;
   background-color: #549b8c;
   margin-top: 1vh;
-  padding: 0.5vw;
+  margin-right: 8vw;
+  padding: 2vw 6vw 2vw 1vw;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   color: #004a4f;
 `;
 
-const StyledBackButton = styled.button`
+const StyledLogCardList = styled.ul`
+  margin-top: 0.1em;
+  margin-right: -3vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+`;
+
+const StyledLogCardListItem = styled.li`
+  list-style-type: none;
+`;
+
+const StyledNewSpendingButton = styled.button`
   align-self: center;
   text-align: center;
-  padding: 1vh 1vw;
-  font-size: 1.2rem;
+  padding: 1vh 3vw;
+  font-size: 1rem;
   border-radius: 30px;
   color: white;
   background-color: #004a4f;
+  margin-top: 2vh;
+`;
+
+const StyledGoBackLink = styled(Link)`
+  font-size: 1rem;
+  color: #004a4f;
+  margin-top: 2vh;
   margin-bottom: 10vh;
 `;

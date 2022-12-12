@@ -9,6 +9,8 @@ function MyApp({Component, pageProps}) {
     []
   );
 
+  const [amount, setAmount] = useLocalStorage("amount", []);
+
   function addSpendingInput(spendingInput) {
     setSpendingInput(previousSpendingInput => [
       {
@@ -21,6 +23,15 @@ function MyApp({Component, pageProps}) {
     ]);
   }
 
+  function addAmount(amount) {
+    setAmount(previousAmount => [
+      ...previousAmount,
+      {
+        amount: Number.parseFloat(amount.amount),
+      },
+    ]);
+  }
+
   return (
     <>
       <GlobalStyles />
@@ -30,6 +41,8 @@ function MyApp({Component, pageProps}) {
         spendingInput={spendingInput}
         setSpendingInput={setSpendingInput}
         onAddSpendingInput={addSpendingInput}
+        amount={amount}
+        onAddAmount={addAmount}
       />
       <Layout />
     </>

@@ -93,9 +93,9 @@ const StyledFormSelect = styled.select`
 const StyledFormButton = styled.button`
   align-self: center;
   text-align: center;
-  margin: 1.2vw 0 1.2vw 0;
-  padding: 1vh 1vw;
-  font-size: 1.2rem;
+  margin: 3vw 0 3vw 0;
+  padding: 1vh 2vw;
+  font-size: 1rem;
   border-radius: 30px;
   color: white;
   background-color: #004a4f;
