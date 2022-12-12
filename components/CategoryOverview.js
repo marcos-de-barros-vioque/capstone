@@ -25,22 +25,18 @@ export default function CategoryOverview({spendingInput, categoryName}) {
                 <StyledLogEntry key={index}>
                   <StyledLogCard>
                     <StyledLogCardList>
-                      {
-                        <>
-                          <StyledLogCardListItem>
-                            Title: {spendingInput.title}
-                          </StyledLogCardListItem>
-                          <StyledLogCardListItem>
-                            Amount: {spendingInput.amount} €
-                          </StyledLogCardListItem>
-                          <StyledLogCardListItem>
-                            Date: {spendingInput.date}
-                          </StyledLogCardListItem>
-                          <StyledLogCardListItem>
-                            Category: {spendingInput.category}
-                          </StyledLogCardListItem>
-                        </>
-                      }
+                      <StyledLogCardListItem>
+                        Title: {spendingInput.title}
+                      </StyledLogCardListItem>
+                      <StyledLogCardListItem>
+                        Amount: {spendingInput.amount} €
+                      </StyledLogCardListItem>
+                      <StyledLogCardListItem>
+                        Date: {spendingInput.date}
+                      </StyledLogCardListItem>
+                      <StyledLogCardListItem>
+                        Category: {spendingInput.category}
+                      </StyledLogCardListItem>
                     </StyledLogCardList>
                   </StyledLogCard>
                 </StyledLogEntry>
