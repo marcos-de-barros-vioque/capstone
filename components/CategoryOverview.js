@@ -12,7 +12,10 @@ export default function CategoryOverview({spendingInput, categoryName}) {
         <StyledTitle>Your Spendings for {categoryName}</StyledTitle>
       </StyledHeader>
       <StyledBody>
-        <SpendingsCounter />
+        <SpendingsCounter
+          spendingInput={spendingInput}
+          categoryName={categoryName}
+        />
         <h3>See all your entries:</h3>
         <StyledLog>
           {spendingInput

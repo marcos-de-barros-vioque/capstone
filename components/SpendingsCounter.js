@@ -1,24 +1,13 @@
 import styled from "styled-components";
 
-export default function SpendingsCounter({
-  spendingInput,
-  amount,
-  categoryName,
-}) {
-  let totalSpendingsValue = 0;
-  let allSpendingsValues = 0;
+export default function SpendingsCounter({spendingInput, categoryName}) {
+  const allSpendingsValues = spendingInput
+    .filter(spendingInput => spendingInput.category === categoryName)
+    .reduce((allSpendingsValues, currentSpending) => {
+      return allSpendingsValues + Number.parseFloat(currentSpending.amount);
+    }, 0);
 
-  if (amount) {
-    console.log(spendingInput, amount);
-    spendingInput
-      .filter(spendingInput => spendingInput.category === categoryName)
-      .slice(amount)
-      .reduce(amount => {
-        allSpendingsValues = allSpendingsValues + Number.parseFloat(amount);
-      });
-  }
-
-  totalSpendingsValue = amount + allSpendingsValues;
+  const totalSpendingsValue = allSpendingsValues;
 
   return (
     <StyledSpendingsCounter>
