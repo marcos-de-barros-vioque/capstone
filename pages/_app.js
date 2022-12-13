@@ -2,6 +2,7 @@ import GlobalStyles from "../styles/GlobalStyles";
 import {Layout} from "../components/Layout";
 import {Header} from "../components/Header";
 import {useLocalStorage} from "../helpers/hooks";
+import initialState from "../helpers/db.json";
 
 function MyApp({Component, pageProps}) {
   const [spendingInput, setSpendingInput] = useLocalStorage(
@@ -10,6 +11,8 @@ function MyApp({Component, pageProps}) {
   );
 
   const [amount, setAmount] = useLocalStorage("amount", []);
+
+  const [tips, setTips] = useLocalStorage("tips", initialState);
 
   function addSpendingInput(spendingInput) {
     setSpendingInput(previousSpendingInput => [
@@ -43,6 +46,8 @@ function MyApp({Component, pageProps}) {
         onAddSpendingInput={addSpendingInput}
         amount={amount}
         onAddAmount={addAmount}
+        tips={tips}
+        setTips={setTips}
       />
       <Layout />
     </>

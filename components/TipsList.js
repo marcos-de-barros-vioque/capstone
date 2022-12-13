@@ -1,11 +1,11 @@
-import Tip from "../Tip";
+import Tip from "./Tip";
 import styled from "styled-components";
 
 export default function TipsList({tips}) {
   return (
     <>
       <StyledList>
-        {tips.map(tip => {
+        {tips?.map(tip => {
           return (
             <ListItem key={tip.id}>
               <Tip tip={tip} />

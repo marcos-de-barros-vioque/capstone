@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "name": "Use leftovers",
+    "name": "Make one meal",
     "category": "Food",
-    "text": "Leftover bread? Freeze it and use it up another day as breadcrumbs or chunky baked croutons.",
-    "image": "/images/food1.png"
+    "text": "Don't get into the habit of cooking for a variety of likes and dislikes and make one meal for everyone.",
+    "image": "/images/food4.png"
   },
   {
     "id": 2,
@@ -22,10 +22,10 @@
   },
   {
     "id": 4,
-    "name": "Make one meal",
+    "name": "Use leftovers",
     "category": "Food",
-    "text": "Don't get into the habit of cooking for a variety of likes and dislikes and make one meal for everyone.",
-    "image": "/images/food4.png"
+    "text": "Leftover bread? Freeze it and use it up another day as breadcrumbs or chunky baked croutons.",
+    "image": "/images/food1.png"
   },
   {
     "id": 5,
