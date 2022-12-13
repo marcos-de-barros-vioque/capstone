@@ -1,6 +1,5 @@
 import Tip from "../Tip";
 import styled from "styled-components";
-import {StyledList} from "../Facility";
 
 export default function TipsList({tips}) {
   return (
@@ -17,6 +16,11 @@ export default function TipsList({tips}) {
     </>
   );
 }
+
+const StyledList = styled.ul`
+  padding: 0;
+  line-height: 1.2 rem;
+`;
 
 const ListItem = styled.li`
   list-style: none;
