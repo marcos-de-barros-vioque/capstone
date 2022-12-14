@@ -25,3 +25,5 @@ const StyledList = styled.ul`
 const ListItem = styled.li`
   list-style: none;
 `;
+
+export {ListItem};
