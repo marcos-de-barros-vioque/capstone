@@ -5,19 +5,17 @@ export default function Tip({tip}) {
   const {name, category, text, image} = tip;
 
   return (
-    <>
-      <StyledSection>
-        <StyledTipTitle>{name}</StyledTipTitle>
-        <StyledImage
-          alt={`Image describing a tip to save on ${category.toLowerCase()}`}
-          src={image}
-          width={300}
-          height={150}
-        />
-        <StyledTipDescription>{text}</StyledTipDescription>
-        <StyledTipCategory>Category: {category}</StyledTipCategory>
-      </StyledSection>
-    </>
+    <StyledSection>
+      <StyledTipTitle>{name}</StyledTipTitle>
+      <StyledImage
+        alt={`How to save on ${category.toLowerCase()}`}
+        src={image}
+        width={300}
+        height={150}
+      />
+      <StyledTipDescription>{text}</StyledTipDescription>
+      <StyledTipCategory>Category: {category}</StyledTipCategory>
+    </StyledSection>
   );
 }
 

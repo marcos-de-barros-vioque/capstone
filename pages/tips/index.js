@@ -33,90 +33,81 @@ export default function TipsPage({tips, tip}) {
 
   return (
     <>
-      <div>
-        <StyledHeader>
-          <StyledTitle>Best Tips & Tricks</StyledTitle>
-        </StyledHeader>
-        <StyledBody>
-          <h3>Choose a category to get the corresponding tips & tricks:</h3>
-          <StyledForm>
-            <StyledDiv>
-              <StyledCheckboxInput
-                type="checkbox"
-                name="Food"
-                id="essen"
-                value="Food"
-                checked={selectedCategories.includes("Food")}
-                onChange={handleToggleFilter}
-              />
-              <StyledLabel htmlFor="essen">Food</StyledLabel>
-            </StyledDiv>
-            <StyledDiv>
-              <StyledCheckboxInput
-                type="checkbox"
-                name="Clothes"
-                id="kleidung"
-                value="Clothes"
-                checked={selectedCategories.includes("Clothes")}
-                onChange={handleToggleFilter}
-              />
-              <StyledLabel htmlFor="Kleidung">Clothes</StyledLabel>
-            </StyledDiv>
-            <StyledDiv>
-              <StyledCheckboxInput
-                type="checkbox"
-                name="Household"
-                id="haushalt"
-                value="Household"
-                checked={selectedCategories.includes("Household")}
-                onChange={handleToggleFilter}
-              />
-              <StyledLabel htmlFor="haushalt">Household</StyledLabel>
-            </StyledDiv>
-            <StyledDiv>
-              <StyledCheckboxInput
-                type="checkbox"
-                name="Entertainment"
-                id="unterhaltung"
-                value="Entertainment"
-                checked={selectedCategories.includes("Entertainment")}
-                onChange={handleToggleFilter}
-              />
-              <StyledLabel htmlFor="unterhaltung">Entertainment</StyledLabel>
-            </StyledDiv>
-            <StyledDiv>
-              <StyledCheckboxInput
-                type="checkbox"
-                name="Gasoline"
-                id="benzin"
-                value="Gasoline"
-                checked={selectedCategories.includes("Gasoline")}
-                onChange={handleToggleFilter}
-              />
-              <StyledLabel htmlFor="benzin">Gasoline</StyledLabel>
-            </StyledDiv>
-            <StyledDiv>
-              <StyledCheckboxInput
-                type="checkbox"
-                name="Restaurants"
-                id="restaurants"
-                value="Restaurants"
-                checked={selectedCategories.includes("Restaurants")}
-                onChange={handleToggleFilter}
-              />
-              <StyledLabel htmlFor="restaurants">Restaurants</StyledLabel>
-            </StyledDiv>
-          </StyledForm>
-          {filteredTips.map(filteredTip => {
-            return (
-              // eslint-disable-next-line react/jsx-key
-              <ListItem key={filteredTip.id}>
-                <Tip tips={tip} tip={filteredTip} />
-              </ListItem>
-            );
-          })}
-        </StyledBody>
-      </div>
+      <StyledHeader>
+        <StyledTitle>Best Tips & Tricks</StyledTitle>
+      </StyledHeader>
+      <StyledBody>
+        <h3>Choose a category to get the corresponding tips & tricks:</h3>
+        <StyledForm>
+          <StyledDiv>
+            <StyledCheckboxInput
+              type="checkbox"
+              id="essen"
+              value="Food"
+              checked={selectedCategories.includes("Food")}
+              onChange={handleToggleFilter}
+            />
+            <StyledLabel htmlFor="essen">Food</StyledLabel>
+          </StyledDiv>
+          <StyledDiv>
+            <StyledCheckboxInput
+              type="checkbox"
+              id="kleidung"
+              value="Clothes"
+              checked={selectedCategories.includes("Clothes")}
+              onChange={handleToggleFilter}
+            />
+            <StyledLabel htmlFor="kleidung">Clothes</StyledLabel>
+          </StyledDiv>
+          <StyledDiv>
+            <StyledCheckboxInput
+              type="checkbox"
+              id="haushalt"
+              value="Household"
+              checked={selectedCategories.includes("Household")}
+              onChange={handleToggleFilter}
+            />
+            <StyledLabel htmlFor="haushalt">Household</StyledLabel>
+          </StyledDiv>
+          <StyledDiv>
+            <StyledCheckboxInput
+              type="checkbox"
+              id="unterhaltung"
+              value="Entertainment"
+              checked={selectedCategories.includes("Entertainment")}
+              onChange={handleToggleFilter}
+            />
+            <StyledLabel htmlFor="unterhaltung">Entertainment</StyledLabel>
+          </StyledDiv>
+          <StyledDiv>
+            <StyledCheckboxInput
+              type="checkbox"
+              id="benzin"
+              value="Gasoline"
+              checked={selectedCategories.includes("Gasoline")}
+              onChange={handleToggleFilter}
+            />
+            <StyledLabel htmlFor="benzin">Gasoline</StyledLabel>
+          </StyledDiv>
+          <StyledDiv>
+            <StyledCheckboxInput
+              type="checkbox"
+              id="restaurants"
+              value="Restaurants"
+              checked={selectedCategories.includes("Restaurants")}
+              onChange={handleToggleFilter}
+            />
+            <StyledLabel htmlFor="restaurants">Restaurants</StyledLabel>
+          </StyledDiv>
+        </StyledForm>
+        {filteredTips.map(filteredTip => {
+          return (
+            <ListItem key={filteredTip.id}>
+              <Tip tips={tip} tip={filteredTip} />
+            </ListItem>
+          );
+        })}
+      </StyledBody>
     </>
   );
 }
