@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "name": "Make one meal",
+    "category": "Food",
+    "text": "Don't get into the habit of cooking for a variety of likes and dislikes and make one meal for everyone.",
+    "image": "/images/food4.png",
+    "filterCriteria": ["Food"]
+  },
+  {
+    "id": 2,
+    "name": "Plan everything",
+    "category": "Food",
+    "text": "Plan and make use of shopping lists in order to avoid temptation in the supermarket.",
+    "image": "/images/food2.png",
+    "filterCriteria": ["Food"]
+  },
+  {
+    "id": 3,
+    "name": "Buy seasonal",
+    "category": "Food",
+    "text": "Buy food with lower prices when it's seasonal, specially when it comes to fruit and veg.",
+    "image": "/images/food3.png",
+    "filterCriteria": ["Food"]
+  },
+  {
+    "id": 4,
+    "name": "Use leftovers",
+    "category": "Food",
+    "text": "Leftover bread? Freeze it and use it up another day as breadcrumbs or chunky baked croutons.",
+    "image": "/images/food1.png",
+    "filterCriteria": ["Food"]
+  },
+  {
+    "id": 5,
+    "name": "Upgrade your outfits",
+    "category": "Clothes",
+    "text": "Add to your wardrobe inexpensive accessories that you can mix with your outfits.",
+    "image": "/images/clothes1.png",
+    "filterCriteria": ["Clothes"]
+  },
+  {
+    "id": 6,
+    "name": "Store clothes properly",
+    "category": "Clothes",
+    "text": "Extend the life of the clothes you do have by taking care when you store them.",
+    "image": "/images/clothes2.png",
+    "filterCriteria": ["Clothes"]
+  },
+  {
+    "id": 7,
+    "name": "Fix clothes by yourself",
+    "category": "Clothes",
+    "text": "Fix your clothes instead of getting rid or giving them to charity and buying new ones.",
+    "image": "/images/clothes3.png",
+    "filterCriteria": ["Clothes"]
+  },
+  {
+    "id": 8,
+    "name": "Hunt for deals",
+    "category": "Clothes",
+    "text": "Sign up to the newsletters of big departaments stores and keep track of their major sales.",
+    "image": "/images/clothes4.png",
+    "filterCriteria": ["Clothes"]
+  },
+  {
+    "id": 9,
+    "name": "Use LED bulbs",
+    "category": "Household",
+    "text": "Use energy-efficient LED bulbs to cut down on electricity costs in the long term.",
+    "image": "/images/household1.png",
+    "filterCriteria": ["Household"]
+  },
+  {
+    "id": 10,
+    "name": "Full load laundry",
+    "category": "Household",
+    "text": "Pack your washer to capacity and run full loads of laundry in order to save on water.",
+    "image": "/images/household2.png",
+    "filterCriteria": ["Household"]
+  },
+  {
+    "id": 11,
+    "name": "Lower heater temperature",
+    "category": "Household",
+    "text": "Lower the temperature on your heater and dress accordingly to the temperature.",
+    "image": "/images/household3.png",
+    "filterCriteria": ["Household"]
+  },
+  {
+    "id": 12,
+    "name": "Hang-dry your clothes",
+    "category": "Household",
+    "text": "Save energy with your laundry by hang-drying your clothes.",
+    "image": "/images/household4.png",
+    "filterCriteria": ["Household"]
+  },
+  {
+    "id": 13,
+    "name": "Library free resources",
+    "category": "Entertainment",
+    "text": "Use library free online resources, such as ebooks or even streaming services.",
+    "image": "/images/entertainment1.png",
+    "filterCriteria": ["Entertainment"]
+  },
+  {
+    "id": 14,
+    "name": "Keep track on offers",
+    "category": "Entertainment",
+    "text": "Check out specials, daily deals, discounts, and coupons offered online.",
+    "image": "/images/entertainment2.png",
+    "filterCriteria": ["Entertainment"]
+  },
+  {
+    "id": 15,
+    "name": "Visit movie matinees",
+    "category": "Entertainment",
+    "text": "Go to movie matinees, since most movie theaters charge less for tickets for afternoon showings.",
+    "image": "/images/entertainment3.png",
+    "filterCriteria": ["Entertainment"]
+  },
+  {
+    "id": 16,
+    "name": "Alternative sport events",
+    "category": "Entertainment",
+    "text": "Attend low-cost or free sporting events hosted by many high schools and colleges.",
+    "image": "/images/entertainment4.png",
+    "filterCriteria": ["Entertainment"]
+  },
+  {
+    "id": 17,
+    "name": "Buy regular fuel",
+    "category": "Gasoline",
+    "text": "Dont pay extra for premium fuel and buy the regular version, which is cheaper.",
+    "image": "/images/gasoline1.png",
+    "filterCriteria": ["Gasoline"]
+  },
+  {
+    "id": 18,
+    "name": "Control your speed",
+    "category": "Gasoline",
+    "text": "Avoid high speeds when unnecessary in order to save you money with better fuel economy.",
+    "image": "/images/gasoline2.png",
+    "filterCriteria": ["Gasoline"]
+  },
+  {
+    "id": 19,
+    "name": "Mantain car tires",
+    "category": "Gasoline",
+    "text": "Keep your tires properly pressurized to get the most out of your gas tank.",
+    "image": "/images/gasoline3.png",
+    "filterCriteria": ["Gasoline"]
+  },
+  {
+    "id": 20,
+    "name": "Turn off engine when possible",
+    "category": "Gasoline",
+    "text": "Turn off your car engine if you are going to need to idle for more than 10 seconds.",
+    "image": "/images/gasoline4.png",
+    "filterCriteria": ["Gasoline"]
+  },
+  {
+    "id": 21,
+    "name": "Benefit from happy hours",
+    "category": "Restaurants",
+    "text": "Hit up happy hour: grab dinner on the early side and eat half-priced appetizers as your entrée.",
+    "image": "/images/restaurants1.png",
+    "filterCriteria": ["Restaurants"]
+  },
+  {
+    "id": 22,
+    "name": "Don't waste food",
+    "category": "Restaurants",
+    "text": "Before your food arrives, ask for a to-go box and stash half of it in the box to enjoy later.",
+    "image": "/images/restaurants2.png",
+    "filterCriteria": ["Restaurants"]
+  },
+  {
+    "id": 23,
+    "name": "Use discount coupons",
+    "category": "Restaurants",
+    "text": "Create an email address just for coupons and sign up for email alerts from your favorite restaurants.",
+    "image": "/images/restaurants3.png",
+    "filterCriteria": ["Restaurants"]
+  },
+  {
+    "id": 24,
+    "name": "Take your meal home",
+    "category": "Restaurants",
+    "text": "Instead of dining in, get your food to go and tip the takeout person around 5% rather than 10%.",
+    "image": "/images/restaurants4.png",
+    "filterCriteria": ["Restaurants"]
+  }
+]

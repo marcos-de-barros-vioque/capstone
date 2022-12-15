@@ -10,6 +10,9 @@ const GlobalStyles = createGlobalStyle`
     }
     * {
         box-sizing: border-box;
+    },
+    ul {
+        padding: 0;
     }
 `;
 
