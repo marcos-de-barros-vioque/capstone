@@ -1,13 +1,13 @@
 import Tip from "./Tip";
 import styled from "styled-components";
 
-export default function TipsList({tips}) {
+export default function TipsList({tips, toggleBookmarking}) {
   return (
     <StyledList>
       {tips?.map(tip => {
         return (
           <ListItem key={tip.id}>
-            <Tip tip={tip} />
+            <Tip tip={tip} toggleBookmarking={toggleBookmarking} />
           </ListItem>
         );
       })}

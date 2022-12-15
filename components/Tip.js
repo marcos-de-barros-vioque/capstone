@@ -2,13 +2,18 @@ import styled from "styled-components";
 import Image from "next/image";
 import {Icon} from "@iconify/react";
 
-export default function Tip({tip}) {
-  const {name, category, text, image} = tip;
+export default function Tip({tip, toggleBookmarking}) {
+  const {name, category, text, image, id} = tip;
 
   return (
     <StyledSection>
       <StyledDiv>
-        <StyledButton type="button">
+        <StyledButton
+          type="button"
+          onClick={() => {
+            toggleBookmarking(id);
+          }}
+        >
           <StyledIcon
             icon="material-symbols:bookmark-add-outline-rounded"
             alt="Bookmark Icon"
