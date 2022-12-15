@@ -38,10 +38,10 @@ export function Layout() {
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="/awards">
+            <Link href="/bookmarks">
               <StyledIcon
-                icon="mdi:trophy-outline"
-                alt="Awards Page Icon"
+                icon="fluent:bookmark-search-24-regular"
+                alt="Bookmarks Page Icon"
                 width="40"
                 height="40"
               />
