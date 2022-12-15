@@ -1,20 +1,33 @@
 import styled from "styled-components";
 import Image from "next/image";
+import {Icon} from "@iconify/react";
 
 export default function Tip({tip}) {
   const {name, category, text, image} = tip;
 
   return (
     <StyledSection>
+      <StyledDiv>
+        <StyledButton type="button">
+          <StyledIcon
+            icon="material-symbols:bookmark-add-outline-rounded"
+            alt="Bookmark Icon"
+            width="40"
+            height="40"
+          />
+        </StyledButton>
+      </StyledDiv>
       <StyledTipTitle>{name}</StyledTipTitle>
-      <StyledImage
-        alt={`How to save on ${category.toLowerCase()}`}
-        src={image}
-        width={300}
-        height={150}
-      />
-      <StyledTipDescription>{text}</StyledTipDescription>
-      <StyledTipCategory>Category: {category}</StyledTipCategory>
+      <StyledContainer>
+        <StyledImage
+          alt={`How to save money on ${category.toLowerCase()}`}
+          src={image}
+          width={300}
+          height={150}
+        />
+        <StyledTipDescription>{text}</StyledTipDescription>
+        <StyledTipCategory>Category: {category}</StyledTipCategory>
+      </StyledContainer>
     </StyledSection>
   );
 }
@@ -32,9 +45,29 @@ const StyledSection = styled.section`
   margin: 1rem;
 `;
 
+const StyledDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const StyledButton = styled.button`
+  border-style: none;
+  background-color: #549b8c;
+  margin-top: 1vh;
+`;
+
+const StyledIcon = styled(Icon)`
+  color: #004a4f;
+`;
+
 const StyledTipTitle = styled.h3`
-  text-align: center;
   text-decoration: underline;
+`;
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const StyledImage = styled(Image)`
