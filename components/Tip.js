@@ -2,16 +2,16 @@ import styled from "styled-components";
 import Image from "next/image";
 import {Icon} from "@iconify/react";
 
-export default function Tip({tip, toggleBookmarking}) {
+export default function Tip({tip, onToggleBookmark}) {
   const {name, category, text, image, id} = tip;
 
   return (
     <StyledSection>
-      <StyledDiv>
+      <StyledButtonWrapper>
         <StyledButton
           type="button"
           onClick={() => {
-            toggleBookmarking(id);
+            onToggleBookmark(id);
           }}
         >
           <StyledIcon
@@ -21,9 +21,9 @@ export default function Tip({tip, toggleBookmarking}) {
             height="40"
           />
         </StyledButton>
-      </StyledDiv>
+      </StyledButtonWrapper>
       <StyledTipTitle>{name}</StyledTipTitle>
-      <StyledContainer>
+      <StyledFlexContainer>
         <StyledImage
           alt={`How to save money on ${category.toLowerCase()}`}
           src={image}
@@ -32,7 +32,7 @@ export default function Tip({tip, toggleBookmarking}) {
         />
         <StyledTipDescription>{text}</StyledTipDescription>
         <StyledTipCategory>Category: {category}</StyledTipCategory>
-      </StyledContainer>
+      </StyledFlexContainer>
     </StyledSection>
   );
 }
@@ -50,7 +50,7 @@ const StyledSection = styled.section`
   margin: 1rem;
 `;
 
-const StyledDiv = styled.div`
+const StyledButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;
@@ -69,7 +69,7 @@ const StyledTipTitle = styled.h3`
   text-decoration: underline;
 `;
 
-const StyledContainer = styled.div`
+const StyledFlexContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

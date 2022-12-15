@@ -38,7 +38,7 @@ function MyApp({Component, pageProps}) {
     ]);
   }
 
-  function toggleBookmarking(tipId) {
+  function onToggleBookmark(tipId) {
     setTips(tips => {
       const newBookmark = tips.map(tip => {
         if (tip.id === tipId) {
@@ -65,7 +65,7 @@ function MyApp({Component, pageProps}) {
         onAddAmount={addAmount}
         tips={tips}
         setTips={setTips}
-        toggleBookmarking={toggleBookmarking}
+        onToggleBookmark={onToggleBookmark}
       />
       <Layout />
     </>

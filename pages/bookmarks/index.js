@@ -3,7 +3,7 @@ import {ListItem} from "../../components/TipsList";
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function Bookmarks({tips, toggleBookmarking}) {
+export default function Bookmarks({tips, onToggleBookmark}) {
   return (
     <>
       <StyledHeader>
@@ -22,7 +22,7 @@ export default function Bookmarks({tips, toggleBookmarking}) {
               <ListItem key={tip.id}>
                 <Tip
                   tip={tip}
-                  toggleBookmarking={toggleBookmarking}
+                  onToggleBookmark={onToggleBookmark}
                   isBookmarked={tip.isBookmarked}
                 />{" "}
               </ListItem>

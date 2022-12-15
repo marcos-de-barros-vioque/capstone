@@ -3,7 +3,7 @@ import Tip from "../../components/Tip";
 import {ListItem} from "../../components/TipsList";
 import {useState} from "react";
 
-export default function TipsPage({tips, toggleBookmarking, tip}) {
+export default function TipsPage({tips, onToggleBookmark, tip}) {
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   function handleToggleFilter(event) {
@@ -106,7 +106,7 @@ export default function TipsPage({tips, toggleBookmarking, tip}) {
               <Tip
                 tips={tip}
                 tip={filteredTip}
-                toggleBookmarking={toggleBookmarking}
+                onToggleBookmark={onToggleBookmark}
               />
             </ListItem>
           );
