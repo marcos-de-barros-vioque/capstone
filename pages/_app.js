@@ -3,6 +3,7 @@ import {Layout} from "../components/Layout";
 import {Header} from "../components/Header";
 import {useLocalStorage} from "../helpers/hooks";
 import initialState from "../helpers/db.json";
+import {useRouter} from "next/router";
 
 function MyApp({Component, pageProps}) {
   const [spendingInput, setSpendingInput] = useLocalStorage(
@@ -13,6 +14,8 @@ function MyApp({Component, pageProps}) {
   const [amount, setAmount] = useLocalStorage("amount", []);
 
   const [tips, setTips] = useLocalStorage("tips", initialState);
+
+  const router = useRouter();
 
   function addSpendingInput(spendingInput) {
     setSpendingInput(previousSpendingInput => [
@@ -35,6 +38,20 @@ function MyApp({Component, pageProps}) {
     ]);
   }
 
+  function onToggleBookmark(tipId) {
+    setTips(tips => {
+      const newBookmark = tips.map(tip => {
+        if (tip.id === tipId) {
+          return {...tip, isBookmarked: !tip.isBookmarked};
+        } else {
+          return tip;
+        }
+      });
+      return newBookmark;
+    });
+    router.push("./bookmarks");
+  }
+
   return (
     <>
       <GlobalStyles />
@@ -48,6 +65,7 @@ function MyApp({Component, pageProps}) {
         onAddAmount={addAmount}
         tips={tips}
         setTips={setTips}
+        onToggleBookmark={onToggleBookmark}
       />
       <Layout />
     </>

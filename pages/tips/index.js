@@ -3,7 +3,7 @@ import Tip from "../../components/Tip";
 import {ListItem} from "../../components/TipsList";
 import {useState} from "react";
 
-export default function TipsPage({tips, tip}) {
+export default function TipsPage({tips, onToggleBookmark, tip}) {
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   function handleToggleFilter(event) {
@@ -103,7 +103,11 @@ export default function TipsPage({tips, tip}) {
         {filteredTips.map(filteredTip => {
           return (
             <ListItem key={filteredTip.id}>
-              <Tip tips={tip} tip={filteredTip} />
+              <Tip
+                tips={tip}
+                tip={filteredTip}
+                onToggleBookmark={onToggleBookmark}
+              />
             </ListItem>
           );
         })}
@@ -132,6 +136,7 @@ const StyledBody = styled.div`
   align-items: center;
   color: #006269;
   border-radius: 10px;
+  margin-bottom: 8vh;
 `;
 
 const StyledForm = styled.form`
