@@ -136,6 +136,7 @@ const StyledBody = styled.div`
   align-items: center;
   color: #006269;
   border-radius: 10px;
+  margin-bottom: 8vh;
 `;
 
 const StyledForm = styled.form`

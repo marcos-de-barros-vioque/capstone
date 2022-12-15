@@ -1,6 +1,7 @@
 import Tip from "../../components/Tip";
 import {ListItem} from "../../components/TipsList";
 import styled from "styled-components";
+import Link from "next/link";
 
 export default function Bookmarks({tips, toggleBookmarking}) {
   return (
@@ -9,7 +10,7 @@ export default function Bookmarks({tips, toggleBookmarking}) {
         <StyledTitle>Your Bookmarked Tips</StyledTitle>
       </StyledHeader>
       <StyledBody>
-        <h3>Here you can see your bookmarked tips:</h3>
+        <h3>Here you can see the tips that you have bookmarked:</h3>
         {!tips.find(tip => tip.isBookmarked) ? (
           <p>You have not bookmarked any tip yet.</p>
         ) : (
@@ -27,6 +28,9 @@ export default function Bookmarks({tips, toggleBookmarking}) {
               </ListItem>
             )
         )}
+        <StyledGoBackLink href="/tips">
+          Look for more Tips & Tricks
+        </StyledGoBackLink>
       </StyledBody>
     </>
   );
@@ -52,4 +56,12 @@ const StyledBody = styled.div`
   align-items: center;
   color: #006269;
   border-radius: 10px;
+  margin-bottom: 8vh;
+`;
+
+const StyledGoBackLink = styled(Link)`
+  font-size: 1rem;
+  color: #004a4f;
+  margin-top: 2vh;
+  margin-bottom: 10vh;
 `;
