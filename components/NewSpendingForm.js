@@ -55,7 +55,7 @@ const StyledBody = styled.div`
   align-items: center;
 `;
 
-const StyledIntro = styled.p`
+const StyledIntro = styled.h3`
   justify-content: center;
   font-size: 1.2rem;
 `;
@@ -69,7 +69,9 @@ const StyledAddSpendingForm = styled.form`
   margin-bottom: 10vh;
   width: 100%;
   border-radius: 5%;
-  background-color: #549b8c;
+  background-color: #17ab9c;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 
 const StyledFormLabel = styled.label`
@@ -81,13 +83,57 @@ const StyledFormLabel = styled.label`
 const StyledFormInput = styled.input`
   border-radius: 5px;
   padding: 1vh;
+  color: #004a4f;
   font-size: 1rem;
+  background: hsla(110, 78%, 59%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(110, 78%, 59%, 1) 0%,
+    hsla(174, 76%, 38%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(110, 78%, 59%, 1) 0%,
+    hsla(174, 76%, 38%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(110, 78%, 59%, 1) 0%,
+    hsla(174, 76%, 38%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#61E846", endColorstr="#17AB9C", GradientType=1 );
 `;
 
 const StyledFormSelect = styled.select`
   border-radius: 5px;
   padding: 1vh;
   font-size: 1rem;
+  color: #004a4f;
+  background: hsla(110, 78%, 59%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(110, 78%, 59%, 1) 0%,
+    hsla(174, 76%, 38%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(110, 78%, 59%, 1) 0%,
+    hsla(174, 76%, 38%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(110, 78%, 59%, 1) 0%,
+    hsla(174, 76%, 38%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#61E846", endColorstr="#17AB9C", GradientType=1 );
 `;
 
 const StyledFormButton = styled.button`

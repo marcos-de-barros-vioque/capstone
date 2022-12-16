@@ -37,7 +37,9 @@ export default function TipsPage({tips, onToggleBookmark, tip}) {
         <StyledTitle>Best Tips & Tricks</StyledTitle>
       </StyledHeader>
       <StyledBody>
-        <h3>Choose a category to get the corresponding tips & tricks:</h3>
+        <StyledIntro>
+          Choose a category to get the corresponding tips:
+        </StyledIntro>
         <StyledForm>
           <StyledDiv>
             <StyledCheckboxInput
@@ -132,11 +134,15 @@ const StyledTitle = styled.h1`
 const StyledBody = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   color: #006269;
   border-radius: 10px;
   margin-bottom: 8vh;
+`;
+
+const StyledIntro = styled.h3`
+  font-size: 1.2rem;
 `;
 
 const StyledForm = styled.form`
