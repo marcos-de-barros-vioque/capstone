@@ -23,8 +23,28 @@ const StyledHeaderContainer = styled.div`
   align-items: left;
   position: fixed;
   width: 100%;
-  background-color: #549b8c;
   top: 0;
+  background: hsla(110, 78%, 59%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(110, 78%, 59%, 1) 0%,
+    hsla(174, 76%, 38%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(110, 78%, 59%, 1) 0%,
+    hsla(174, 76%, 38%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(110, 78%, 59%, 1) 0%,
+    hsla(174, 76%, 38%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#61E846", endColorstr="#17AB9C", GradientType=1 );
 `;
 
 const StyledLogo = styled(Link)`

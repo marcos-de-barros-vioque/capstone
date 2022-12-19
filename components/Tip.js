@@ -43,7 +43,7 @@ const StyledSection = styled.section`
   align-items: center;
   border-radius: 5%;
   color: #004a4f;
-  background-color: #549b8c;
+  background-color: #17ab9c;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   margin-bottom: 2vh;
@@ -57,7 +57,7 @@ const StyledButtonWrapper = styled.div`
 
 const StyledButton = styled.button`
   border-style: none;
-  background-color: #549b8c;
+  background-color: #17ab9c;
   margin-top: 1vh;
 `;
 

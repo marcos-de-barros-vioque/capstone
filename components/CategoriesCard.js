@@ -87,10 +87,12 @@ const StyledCategoryCardLink = styled(Link)`
   text-decoration: none;
   color: #004a4f;
   border-radius: 5%;
-  background-color: #549b8c;
+  background-color: #17ab9c;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 
 const StyledCategoryCardTitle = styled.h3`
