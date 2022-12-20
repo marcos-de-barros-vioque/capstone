@@ -67,7 +67,7 @@ function MyApp({Component, pageProps}) {
         setTips={setTips}
         onToggleBookmark={onToggleBookmark}
       />
-      <Layout />
+      <Layout key={router.asPath} />
     </>
   );
 }
