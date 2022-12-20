@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import {Icon} from "@iconify/react";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 export function Layout() {
+  const router = useRouter();
+  const pathname = router.asPath;
+
   return (
     <>
       <Navbar role="navbar">
@@ -14,6 +18,7 @@ export function Layout() {
                 alt="Home Page Icon"
                 width="40"
                 height="40"
+                active={pathname === "/" ? 1 : 0}
               />
             </Link>
           </NavItem>
@@ -24,6 +29,7 @@ export function Layout() {
                 alt="Add Spendings Page Icon"
                 width="40"
                 height="40"
+                active={pathname === "/addspending" ? 1 : 0}
               />
             </Link>
           </NavItem>
@@ -34,6 +40,7 @@ export function Layout() {
                 alt="Tips & Tricks Page Icon"
                 width="40"
                 height="40"
+                active={pathname === "/tips" ? 1 : 0}
               />
             </Link>
           </NavItem>
@@ -44,6 +51,7 @@ export function Layout() {
                 alt="Bookmarks Page Icon"
                 width="40"
                 height="40"
+                active={pathname === "/bookmarks" ? 1 : 0}
               />
             </Link>
           </NavItem>
@@ -96,5 +104,5 @@ const NavItem = styled.li`
 `;
 
 const StyledIcon = styled(Icon)`
-  color: #004a4f;
+  color: ${props => (props.active ? "white" : "#004a4f")};
 `;
