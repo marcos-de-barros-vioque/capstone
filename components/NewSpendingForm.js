@@ -3,7 +3,7 @@ import {useRouter} from "next/router";
 import {useState} from "react";
 import UserFeedback from "./UserFeedback";
 
-export default function NewSpendingForm({onAddSpending, push}) {
+export default function NewSpendingForm({onAddSpending}) {
   const [showUserFeedback, setShowUserFeedback] = useState(false);
   const router = useRouter();
 
@@ -26,7 +26,7 @@ export default function NewSpendingForm({onAddSpending, push}) {
       {showUserFeedback && (
         <UserFeedback
           text="Your spending has been successfully added!"
-          onClose={push}
+          onClose={onAddSpending}
         />
       )}
       {!showUserFeedback && (
