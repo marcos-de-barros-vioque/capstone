@@ -10,7 +10,7 @@ export default function UserFeedback({text, onClose}) {
     }, 3000);
 
     return () => clearTimeout(timeoutID);
-  }, []);
+  }, [onClose]);
 
   return userFeedback ? <h3>{text}</h3> : null;
 }
