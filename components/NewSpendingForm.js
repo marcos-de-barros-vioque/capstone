@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import {useRouter} from "next/router";
+import {useState} from "react";
+import UserFeedback from "./UserFeedback";
 
 export default function NewSpendingForm({onAddSpending}) {
+  const [showUserFeedback, setShowUserFeedback] = useState(false);
   const router = useRouter();
 
   const handleSubmit = event => {
@@ -13,38 +16,54 @@ export default function NewSpendingForm({onAddSpending}) {
     onAddSpending(data);
 
     const {category} = data;
-    alert("Your spending has been successfully added!");
+    setShowUserFeedback(true);
+    //alert("Your spending has been successfully added!");
     router.push("./" + category.toLowerCase());
   };
 
   return (
     <StyledBody>
-      <StyledIntro>Please fill the form to add your spendings:</StyledIntro>
-      <StyledAddSpendingForm onSubmit={handleSubmit}>
-        <StyledFormLabel>Title</StyledFormLabel>
-        <StyledFormInput type="text" id="title" name="title" required />
-        <StyledFormLabel>Amount</StyledFormLabel>
-        <StyledFormInput
-          type="number"
-          id="amount"
-          name="amount"
-          step="0.01"
-          min="0"
-          required
+      {showUserFeedback && (
+        <UserFeedback
+          text="Your spending has been successfully added!"
+          onClose={onAddSpending}
         />
-        <StyledFormLabel>Date</StyledFormLabel>
-        <StyledFormInput type="date" id="date" name="date" required />
-        <StyledFormLabel>Category</StyledFormLabel>
-        <StyledFormSelect type="select" id="category" name="category" required>
-          <option value="Food">Food</option>
-          <option value="Clothes">Clothes</option>
-          <option value="Household">Household</option>
-          <option value="Entertainment">Entertainment</option>
-          <option value="Gasoline">Gasoline</option>
-          <option value="Restaurants">Restaurants</option>
-        </StyledFormSelect>
-        <StyledFormButton type="submit">Submit</StyledFormButton>
-      </StyledAddSpendingForm>
+      )}
+      {!showUserFeedback && (
+        <>
+          <StyledIntro>Please fill the form to add your spendings:</StyledIntro>
+          <StyledAddSpendingForm onSubmit={handleSubmit}>
+            <StyledFormLabel>Title</StyledFormLabel>
+            <StyledFormInput type="text" id="title" name="title" required />
+            <StyledFormLabel>Amount</StyledFormLabel>
+            <StyledFormInput
+              type="number"
+              id="amount"
+              name="amount"
+              step="0.01"
+              min="0"
+              required
+            />
+            <StyledFormLabel>Date</StyledFormLabel>
+            <StyledFormInput type="date" id="date" name="date" required />
+            <StyledFormLabel>Category</StyledFormLabel>
+            <StyledFormSelect
+              type="select"
+              id="category"
+              name="category"
+              required
+            >
+              <option value="Food">Food</option>
+              <option value="Clothes">Clothes</option>
+              <option value="Household">Household</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Gasoline">Gasoline</option>
+              <option value="Restaurants">Restaurants</option>
+            </StyledFormSelect>
+            <StyledFormButton type="submit">Submit</StyledFormButton>
+          </StyledAddSpendingForm>
+        </>
+      )}
     </StyledBody>
   );
 }
