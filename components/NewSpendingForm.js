@@ -72,6 +72,10 @@ const StyledBody = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 430px) {
+    width: 80vw;
+  }
 `;
 
 const StyledIntro = styled.h3`
