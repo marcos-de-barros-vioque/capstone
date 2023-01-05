@@ -12,7 +12,7 @@ export default function Bookmarks({tips, onToggleBookmark}) {
       <StyledBody>
         <h3>Here you can see the tips that you have bookmarked:</h3>
         {!tips.find(tip => tip.isBookmarked) ? (
-          <p>You have not bookmarked any tip yet.</p>
+          <p>You have not bookmarked any tips yet.</p>
         ) : (
           ""
         )}
