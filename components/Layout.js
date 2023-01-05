@@ -64,6 +64,8 @@ export function Layout() {
 export const Navbar = styled.nav`
   position: fixed;
   bottom: 0;
+  display: flex;
+  align-items: center;
   width: 100%;
   background: hsla(110, 78%, 59%, 1);
 

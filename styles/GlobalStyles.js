@@ -1,7 +1,8 @@
 import {createGlobalStyle} from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-    html {
+    html,
+    body {
         padding: 0;
         margin: 0;
         font-family: "Helvetica";
