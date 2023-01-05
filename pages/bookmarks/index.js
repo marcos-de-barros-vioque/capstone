@@ -10,7 +10,9 @@ export default function Bookmarks({tips, onToggleBookmark}) {
         <StyledTitle>Your Bookmarked Tips</StyledTitle>
       </StyledHeader>
       <StyledBody>
-        <h3>Here you can see the tips that you have bookmarked:</h3>
+        <StyledIntro>
+          Here you can see the tips that you have bookmarked:
+        </StyledIntro>
         {!tips.find(tip => tip.isBookmarked) ? (
           <p>You have not bookmarked any tips yet.</p>
         ) : (
@@ -57,6 +59,10 @@ const StyledBody = styled.div`
   color: #006269;
   border-radius: 10px;
   margin-bottom: 8vh;
+`;
+
+const StyledIntro = styled.h3`
+  font-size: 1.2rem;
 `;
 
 const StyledGoBackLink = styled(Link)`
