@@ -10,6 +10,10 @@ Spendator was developed as my capstone project during the final four weeks of th
 
 This app is optimized for mobile usage, so please switch your browser to responsive mode.
 
+## App Impressions
+
+<img src="https://github.com/marcos-de-barros-vioque/capstone/blob/main/public/spendator_readme.gif" />
+
 ## Demo
 
 You can find the hosted version on Vercel: <a href="https://spendator.vercel.app/">Demo Version</a>
